@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16 # Use a specific version, e.g., 16
+    restart: always
+    environment:
+      POSTGRES_USER: app_myjobs
+      POSTGRES_PASSWORD: app_myjobs_pa11word
+      POSTGRES_DB: myjob_interview
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
