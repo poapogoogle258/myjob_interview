@@ -48,3 +48,38 @@ type JobResponse struct {
 		} `json:"results"`
 	} `json:"results"`
 }
+
+type JobDetailResponse struct {
+	Jobdetails struct {
+		Result struct {
+			Job struct {
+				ID          string `json:"id"`
+				Title       string `json:"title"`
+				PhoneNumber string `json:"phoneNumber"`
+				IsExpired   bool   `json:"isExpired"`
+				ExpiresAt   struct {
+					DateTimeUtc time.Time `json:"dateTimeUtc"`
+				} `json:"expiresAt"`
+				Abstract  string `json:"abstract"`
+				Content   string `json:"content"`
+				Salary    string `json:"salary"`
+				WorkTypes struct {
+					Label string `json:"label"`
+				} `json:"workTypes"`
+				Advertiser struct {
+					ID   string `json:"id"`
+					Name string `json:"name"`
+				} `json:"advertiser"`
+				Location struct {
+					Label string `json:"label"`
+				} `json:"location"`
+			} `json:"job"`
+			Insights []struct {
+				VolumeLabel string `json:"volumeLabel"`
+			} `json:"insights"`
+			WorkArrangements struct {
+				Label string `json:"label"`
+			} `json:"workArrangements"`
+		} `json:"result"`
+	} `json:"jobdetails"`
+}

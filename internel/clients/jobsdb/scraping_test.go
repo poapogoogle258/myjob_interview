@@ -14,3 +14,14 @@ func TestFetchJob(t *testing.T) {
 		fmt.Println(i+1, ") ", job.Title)
 	}
 }
+
+func TestFetchJobDetail(t *testing.T) {
+	data, err := jobsdb.FetchJobDetail("90538471")
+	if err != nil {
+		t.Errorf("FetchJobDetail() failed: %v", err)
+		return
+	}
+
+	fmt.Println(data.Jobdetails)
+
+}
