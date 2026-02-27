@@ -1,4 +1,4 @@
-package scrapers
+package jobthai
 
 import (
 	"encoding/json"
@@ -8,7 +8,7 @@ import (
 	"net/url"
 )
 
-func FetchJobs(keyword string, page int) (*Jobthai_jobResponse, error) {
+func FetchJobs(keyword string, page int) (*JobResponse, error) {
 	sha256Hash := "8c21badbcb9da924a3ed99c6d2f16d34758a045523495b4458f2a970c70cd0b2"
 	variables := fmt.Sprintf(`{"searchJobsFilter":{"province":"01","keyword":"%s","l":"th","page":%d},"orderBy":"UPDATED_AT_DESC","staticDataVersion":{"jobType":null,"subjobType":null}}`, keyword, page)
 	extensions := fmt.Sprintf(`{"persistedQuery":{"version":1,"sha256Hash":"%s"}}`, sha256Hash)
@@ -38,7 +38,7 @@ func FetchJobs(keyword string, page int) (*Jobthai_jobResponse, error) {
 
 	body, _ := io.ReadAll(resp.Body)
 
-	var jobData Jobthai_jobResponse
+	var jobData JobResponse
 	if err := json.Unmarshal(body, &jobData); err != nil {
 		return nil, err
 	}
@@ -46,7 +46,7 @@ func FetchJobs(keyword string, page int) (*Jobthai_jobResponse, error) {
 	return &jobData, nil
 }
 
-func FetchJobsDetail(id int) (*Jobthai_jobDetailResponse, error) {
+func FetchJobsDetail(id int) (*JobDetailResponse, error) {
 	sha256Hash := "4fe6bb56592bed522754f07a0cf519150f67ad761c375917b9084f216f0ea93e"
 	variables := fmt.Sprintf(`{"id":%d,"l":"th","isJobbuffer":false,"staticDataVersion":{"jobType":null,"subjobType":null}}`, id)
 	extensions := fmt.Sprintf(`{"persistedQuery":{"version":1,"sha256Hash":"%s"}}`, sha256Hash)
@@ -76,7 +76,7 @@ func FetchJobsDetail(id int) (*Jobthai_jobDetailResponse, error) {
 
 	body, _ := io.ReadAll(resp.Body)
 
-	var jobData Jobthai_jobDetailResponse
+	var jobData JobDetailResponse
 	if err := json.Unmarshal(body, &jobData); err != nil {
 		return nil, err
 	}

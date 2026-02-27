@@ -1,10 +1,10 @@
-package scrapers_test
+package jobthai_test
 
 import (
 	"fmt"
 	"testing"
 
-	"github.com/poapogoogle258/myjob_interview/internel/scrapers"
+	"github.com/poapogoogle258/myjob_interview/internel/clients/jobthai"
 )
 
 func TestFetchJobs(t *testing.T) {
@@ -13,7 +13,7 @@ func TestFetchJobs(t *testing.T) {
 		// Named input parameters for target function.
 		keyword string
 		page    int
-		want    *scrapers.Jobthai_jobResponse
+		want    *jobthai.JobResponse
 		wantErr bool
 	}{
 		// TODO: Add test cases.
@@ -30,7 +30,7 @@ func TestFetchJobs(t *testing.T) {
 			i := 1
 
 		FetchJob:
-			result, gotErr := scrapers.FetchJobs(tt.keyword, tt.page)
+			result, gotErr := jobthai.FetchJobs(tt.keyword, tt.page)
 			if gotErr != nil {
 				if !tt.wantErr {
 					t.Errorf("FetchJobs() failed: %v", gotErr)
@@ -58,7 +58,7 @@ func TestFetchJobsDetail(t *testing.T) {
 		name string // description of this test case
 		// Named input parameters for target function.
 		id      int
-		want    *scrapers.Jobthai_jobDetailResponse
+		want    *jobthai.JobDetailResponse
 		wantErr bool
 	}{
 		// TODO: Add test cases.
@@ -72,7 +72,7 @@ func TestFetchJobsDetail(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			detail, gotErr := scrapers.FetchJobsDetail(tt.id)
+			detail, gotErr := jobthai.FetchJobsDetail(tt.id)
 			if gotErr != nil {
 				if !tt.wantErr {
 					t.Errorf("FetchJobsDetail() failed: %v", gotErr)

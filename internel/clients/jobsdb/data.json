@@ -1,0 +1,3746 @@
+{
+    "appConfig": {
+        "brand": "jobsdb",
+        "site": "candidate-jobsdb-th",
+        "language": "th",
+        "country": "TH",
+        "zone": "asia-3",
+        "zoneFeatures": {
+            "AUTO_SELECT_SPLIT_VIEW_FIRST_JOB": false,
+            "HOMEPAGE_BANNER_TYPE": "multiple-asia",
+            "HOMEPAGE_LHS_BANNER_TYPE": "GENERIC_ASIA_BANNER",
+            "HOMEPAGE_RHS_BANNER_TYPE": "MARKETING_BANNER_SEEK_PASS",
+            "JOBSEARCH_ASSIST": false,
+            "LMIS_ENABLED": true,
+            "NUDGE_ENABLED": false,
+            "PDPA_CONSENT_REQUIRED": true,
+            "SEARCH_PAGE_SIZE": 32,
+            "SHOW_FLOATING_SAVE_SEARCH": false,
+            "SHOW_MARKETING_AD_SPLIT_VIEW": true
+        },
+        "locale": "th-TH"
+    },
+    "banner": {
+        "template": {
+            "items": []
+        },
+        "error": null
+    },
+    "featureFlags": {
+        "autoSelectSplitViewFirstJob": false,
+        "branchBannerPreview": false,
+        "hideCompanyLogo": false,
+        "homepageJobCardDensity": false,
+        "isBranchEnabledFlag": true,
+        "isJobSearchAssistEnabled": false,
+        "loggedOutRecs": false,
+        "showFloatingSaveSearch": false,
+        "showHomepageBanner": false,
+        "showMarketingAdSplitView": true,
+        "seoLandingPage": false,
+        "overrides": {}
+    },
+    "jobdetails": {
+        "fraudReport": {},
+        "jobPending": false,
+        "result": null,
+        "pageLoadedCount": 0,
+        "personalised": null
+    },
+    "lmis": {
+        "SRP": {
+            "content": ""
+        },
+        "JDP": {
+            "content": ""
+        }
+    },
+    "location": {
+        "url": "http:\u002F\u002Fth.jobsdb.com\u002Fth\u002Fgolang-jobs\u002Fin-%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3",
+        "prevPathname": "",
+        "query": {},
+        "pageNumber": 1,
+        "isHomepage": false,
+        "pathname": "\u002Fth\u002Fgolang-jobs\u002Fin-%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3",
+        "hostname": "th.jobsdb.com",
+        "href": "http:\u002F\u002Fth.jobsdb.com\u002Fth\u002Fgolang-jobs\u002Fin-%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3",
+        "port": "",
+        "protocol": "http:",
+        "hash": ""
+    },
+    "recentSearches": {
+        "searches": [
+            {
+                "query": {
+                    "keywords": "golang",
+                    "where": "กรุงเทพมหานคร"
+                },
+                "date": "2026-02-27T10:59:15.991Z",
+                "summary": "Golang in กรุงเทพมหานคร"
+            },
+            {
+                "query": {
+                    "keywords": "Feedme POS Sdn. Bhd."
+                },
+                "date": "2026-02-27T10:57:50.579Z",
+                "summary": "Feedme POS Sdn. Bhd. in Australia"
+            },
+            {
+                "query": {},
+                "date": "2026-02-27T10:45:46.604Z",
+                "summary": "Jobs in Australia"
+            }
+        ]
+    },
+    "results": {
+        "facets": {},
+        "feedbackSubmittedJobs": [],
+        "hasLoadedCountNew": true,
+        "hiddenJobs": [],
+        "isError": false,
+        "isLoading": false,
+        "jobIds": [
+            "90372752",
+            "90537634",
+            "88575101",
+            "90437757",
+            "90009449",
+            "90307308",
+            "90562207",
+            "90623433",
+            "90371642",
+            "90307508",
+            "90309959",
+            "90282404",
+            "90567334",
+            "90613579",
+            "90522046",
+            "90555369",
+            "89871258",
+            "90027511",
+            "89113077",
+            "90405778",
+            "90368554",
+            "90305906",
+            "90340258",
+            "90535954",
+            "90334300",
+            "90430150",
+            "86613187",
+            "90350000",
+            "90013196",
+            "90467843",
+            "90405388",
+            "90567013"
+        ],
+        "lastPage": 0,
+        "locationWhere": "กรุงเทพมหานคร",
+        "relatedSearches": [
+            {
+                "keywords": "golang developer",
+                "totalJobs": 38,
+                "language": "ENGLISH",
+                "locations": [
+                    {
+                        "id": "seek-1000002",
+                        "label": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานคร"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานคร"
+                        },
+                        "kind": "State",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    },
+                    {
+                        "id": "seek-47516",
+                        "label": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานครและปริมณฑล"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานครและปริมณฑล"
+                        },
+                        "kind": "Region",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    },
+                    {
+                        "id": "seek-24572",
+                        "label": {
+                            "lang": "th",
+                            "text": "ไทย"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "ไทย"
+                        },
+                        "kind": "Country",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    }
+                ]
+            },
+            {
+                "keywords": "go",
+                "totalJobs": 37,
+                "language": "ENGLISH",
+                "locations": [
+                    {
+                        "id": "seek-1000002",
+                        "label": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานคร"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานคร"
+                        },
+                        "kind": "State",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    },
+                    {
+                        "id": "seek-47516",
+                        "label": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานครและปริมณฑล"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานครและปริมณฑล"
+                        },
+                        "kind": "Region",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    },
+                    {
+                        "id": "seek-24572",
+                        "label": {
+                            "lang": "th",
+                            "text": "ไทย"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "ไทย"
+                        },
+                        "kind": "Country",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    }
+                ]
+            },
+            {
+                "keywords": "python",
+                "totalJobs": 674,
+                "language": "ENGLISH",
+                "locations": [
+                    {
+                        "id": "seek-1000002",
+                        "label": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานคร"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานคร"
+                        },
+                        "kind": "State",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    },
+                    {
+                        "id": "seek-47516",
+                        "label": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานครและปริมณฑล"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานครและปริมณฑล"
+                        },
+                        "kind": "Region",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    },
+                    {
+                        "id": "seek-24572",
+                        "label": {
+                            "lang": "th",
+                            "text": "ไทย"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "ไทย"
+                        },
+                        "kind": "Country",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    }
+                ]
+            },
+            {
+                "keywords": "backend",
+                "totalJobs": 295,
+                "language": "ENGLISH",
+                "locations": [
+                    {
+                        "id": "seek-1000002",
+                        "label": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานคร"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานคร"
+                        },
+                        "kind": "State",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    },
+                    {
+                        "id": "seek-47516",
+                        "label": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานครและปริมณฑล"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานครและปริมณฑล"
+                        },
+                        "kind": "Region",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    },
+                    {
+                        "id": "seek-24572",
+                        "label": {
+                            "lang": "th",
+                            "text": "ไทย"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "ไทย"
+                        },
+                        "kind": "Country",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    }
+                ]
+            },
+            {
+                "keywords": "java",
+                "totalJobs": 464,
+                "language": "ENGLISH",
+                "locations": [
+                    {
+                        "id": "seek-1000002",
+                        "label": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานคร"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานคร"
+                        },
+                        "kind": "State",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    },
+                    {
+                        "id": "seek-47516",
+                        "label": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานครและปริมณฑล"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานครและปริมณฑล"
+                        },
+                        "kind": "Region",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    },
+                    {
+                        "id": "seek-24572",
+                        "label": {
+                            "lang": "th",
+                            "text": "ไทย"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "ไทย"
+                        },
+                        "kind": "Country",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    }
+                ]
+            },
+            {
+                "keywords": "react",
+                "totalJobs": 260,
+                "language": "ENGLISH",
+                "locations": [
+                    {
+                        "id": "seek-1000002",
+                        "label": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานคร"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานคร"
+                        },
+                        "kind": "State",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    },
+                    {
+                        "id": "seek-47516",
+                        "label": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานครและปริมณฑล"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานครและปริมณฑล"
+                        },
+                        "kind": "Region",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    },
+                    {
+                        "id": "seek-24572",
+                        "label": {
+                            "lang": "th",
+                            "text": "ไทย"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "ไทย"
+                        },
+                        "kind": "Country",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    }
+                ]
+            },
+            {
+                "keywords": "software engineer",
+                "totalJobs": 467,
+                "language": "ENGLISH",
+                "locations": [
+                    {
+                        "id": "seek-1000002",
+                        "label": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานคร"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานคร"
+                        },
+                        "kind": "State",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    },
+                    {
+                        "id": "seek-47516",
+                        "label": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานครและปริมณฑล"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานครและปริมณฑล"
+                        },
+                        "kind": "Region",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    },
+                    {
+                        "id": "seek-24572",
+                        "label": {
+                            "lang": "th",
+                            "text": "ไทย"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "ไทย"
+                        },
+                        "kind": "Country",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    }
+                ]
+            },
+            {
+                "keywords": "c#",
+                "totalJobs": 355,
+                "language": "ENGLISH",
+                "locations": [
+                    {
+                        "id": "seek-1000002",
+                        "label": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานคร"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานคร"
+                        },
+                        "kind": "State",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    },
+                    {
+                        "id": "seek-47516",
+                        "label": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานครและปริมณฑล"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานครและปริมณฑล"
+                        },
+                        "kind": "Region",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    },
+                    {
+                        "id": "seek-24572",
+                        "label": {
+                            "lang": "th",
+                            "text": "ไทย"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "ไทย"
+                        },
+                        "kind": "Country",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    }
+                ]
+            },
+            {
+                "keywords": "data analyst",
+                "totalJobs": 1486,
+                "language": "ENGLISH",
+                "locations": [
+                    {
+                        "id": "seek-1000002",
+                        "label": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานคร"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานคร"
+                        },
+                        "kind": "State",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    },
+                    {
+                        "id": "seek-47516",
+                        "label": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานครและปริมณฑล"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานครและปริมณฑล"
+                        },
+                        "kind": "Region",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    },
+                    {
+                        "id": "seek-24572",
+                        "label": {
+                            "lang": "th",
+                            "text": "ไทย"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "ไทย"
+                        },
+                        "kind": "Country",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    }
+                ]
+            },
+            {
+                "keywords": "nodejs",
+                "totalJobs": 154,
+                "locations": [
+                    {
+                        "id": "seek-1000002",
+                        "label": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานคร"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานคร"
+                        },
+                        "kind": "State",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    },
+                    {
+                        "id": "seek-47516",
+                        "label": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานครและปริมณฑล"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานครและปริมณฑล"
+                        },
+                        "kind": "Region",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    },
+                    {
+                        "id": "seek-24572",
+                        "label": {
+                            "lang": "th",
+                            "text": "ไทย"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "ไทย"
+                        },
+                        "kind": "Country",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    }
+                ]
+            },
+            {
+                "keywords": "devops",
+                "totalJobs": 222,
+                "language": "ENGLISH",
+                "locations": [
+                    {
+                        "id": "seek-1000002",
+                        "label": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานคร"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานคร"
+                        },
+                        "kind": "State",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    },
+                    {
+                        "id": "seek-47516",
+                        "label": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานครและปริมณฑล"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานครและปริมณฑล"
+                        },
+                        "kind": "Region",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    },
+                    {
+                        "id": "seek-24572",
+                        "label": {
+                            "lang": "th",
+                            "text": "ไทย"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "ไทย"
+                        },
+                        "kind": "Country",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    }
+                ]
+            },
+            {
+                "keywords": "บริษัท บิทคับ ออนไลน์ จำกัด",
+                "totalJobs": 7,
+                "type": "organisation",
+                "locations": [
+                    {
+                        "id": "seek-1000002",
+                        "label": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานคร"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานคร"
+                        },
+                        "kind": "State",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    },
+                    {
+                        "id": "seek-47516",
+                        "label": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานครและปริมณฑล"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "กรุงเทพมหานครและปริมณฑล"
+                        },
+                        "kind": "Region",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    },
+                    {
+                        "id": "seek-24572",
+                        "label": {
+                            "lang": "th",
+                            "text": "ไทย"
+                        },
+                        "contextualName": {
+                            "lang": "th",
+                            "text": "ไทย"
+                        },
+                        "kind": "Country",
+                        "isGranular": false,
+                        "defaultDistanceKms": 50
+                    }
+                ]
+            }
+        ],
+        "relatedSearchesWithJobs": [],
+        "results": {
+            "isLoading": false,
+            "isZeroResults": false,
+            "summary": {
+                "displayTotalCount": "54",
+                "text": "jobs found"
+            },
+            "header": null,
+            "tiers": null,
+            "locationSuggestions": null,
+            "hasHeaderBeforeJobs": false,
+            "searchParams": {
+                "keywords": "golang",
+                "where": "กรุงเทพมหานคร"
+            },
+            "jobs": [
+                {
+                    "advertiser": {
+                        "id": "61240401",
+                        "description": "Lansing Business Systems Co., Ltd."
+                    },
+                    "bulletPoints": [
+                        "Golang"
+                    ],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002Fa6a359fd-7219-44a1-a29b-11bfd4cd9578.1\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6287",
+                                "description": "งานโปรแกรมเมอร์"
+                            }
+                        }
+                    ],
+                    "companyName": "Lansing Business Systems",
+                    "companyProfileStructuredDataId": 446205,
+                    "displayStyle": {
+                        "search": "sourcrProfile"
+                    },
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "446205",
+                        "name": "Lansing Business Systems",
+                        "companyId": "171090159679075",
+                        "companyUrl": "https:\u002F\u002Fth.jobsdb.com\u002Fcompanies\u002Flansing-business-systems-171090159679075"
+                    },
+                    "id": "90372752",
+                    "isFeatured": false,
+                    "listingDate": "2026-02-16T11:09:56Z",
+                    "listingDateDisplay": "10 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "go-software-developer",
+                    "salaryLabel": "",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "90372752",
+                        "section": "MAIN",
+                        "sectionRank": 1,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "0"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "SEEN",
+                            "label": "Seen"
+                        },
+                        {
+                            "type": "VIEWED",
+                            "label": "ดูแล้ว"
+                        }
+                    ],
+                    "teaser": "Developer golang",
+                    "title": "Senior Developer Golang (Contract) Urgently!!!",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfMSIKfQ==",
+                    "workTypes": [
+                        "งานสัญญาจ้าง"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "1",
+                                "label": {
+                                    "text": "เข้าออฟฟิศ"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "62132557",
+                        "description": "Collective Wisdom Co., Ltd."
+                    },
+                    "bulletPoints": [],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F16021e58-b9df-4b87-8bfc-048cedebb4e8.2\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6287",
+                                "description": "งานโปรแกรมเมอร์"
+                            }
+                        }
+                    ],
+                    "companyName": "Collective Wisdom Co., Ltd.",
+                    "companyProfileStructuredDataId": 3033004,
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "3033004",
+                        "name": "Collective Wisdom Co., Ltd."
+                    },
+                    "id": "90537634",
+                    "isFeatured": false,
+                    "listingDate": "2026-02-24T09:37:22Z",
+                    "listingDateDisplay": "3 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "backend-developer",
+                    "salaryLabel": "฿40,000 – ฿60,000 per month",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "90537634",
+                        "section": "MAIN",
+                        "sectionRank": 2,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "0"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "SEEN",
+                            "label": "Seen"
+                        },
+                        {
+                            "type": "TOP_APPLICANT",
+                            "label": "โอกาสได้งานสูง"
+                        }
+                    ],
+                    "teaser": "ได้ทำงานใน Tech Stack ที่ทันสมัย และมีสิทธิ์ตัดสินใจในงานสถาปัตยกรรมระบบ วัฒนธรรมองค์กรแบบสมัยใหม่ เน้นผลลัพธ์ (Flexible Working)",
+                    "title": "Senior Backend Developer",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfMiIKfQ==",
+                    "workTypes": [
+                        "งานเต็มเวลา"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "2",
+                                "label": {
+                                    "text": "ไฮบริด"
+                                }
+                            }
+                        ],
+                        "displayText": "ไฮบริด"
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "61263057",
+                        "description": "SCB TECH X CO., LTD."
+                    },
+                    "bulletPoints": [
+                        "Develop and maintain scalable backend services and APIs using Go",
+                        "Build cloud-native microservices with high performance and reliability",
+                        "Collaborate across teams to deliver robust, production-ready systems"
+                    ],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002Fe6ae29c9-3a98-4498-a049-5716ca985db2.1\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6290",
+                                "description": "งานวิศวกร - ซอฟต์แวร์"
+                            }
+                        }
+                    ],
+                    "companyName": "SCB Tech X Co., Ltd.",
+                    "companyProfileStructuredDataId": 526375,
+                    "displayStyle": {
+                        "search": "sourcrProfile"
+                    },
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "526375",
+                        "name": "SCB Tech X Co., Ltd."
+                    },
+                    "id": "88575101",
+                    "isFeatured": false,
+                    "listingDate": "2026-02-12T08:49:01Z",
+                    "listingDateDisplay": "15 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "จตุจักร กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "จตุจักร กรุงเทพมหานคร"
+                                },
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "backend-engineer",
+                    "salaryLabel": "",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "88575101",
+                        "section": "MAIN",
+                        "sectionRank": 3,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "0"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "SEEN",
+                            "label": "Seen"
+                        }
+                    ],
+                    "teaser": "Build and scale backend services with Go at SCB TechX. Work on APIs, cloud, microservices, and drive high-performance systems.",
+                    "title": "Software Engineer (Backend \u002F Fullstack) - Contract 2 years",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfMyIKfQ==",
+                    "workTypes": [
+                        "งานเต็มเวลา"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "2",
+                                "label": {
+                                    "text": "ไฮบริด"
+                                }
+                            }
+                        ],
+                        "displayText": "ไฮบริด"
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "62161749",
+                        "description": "Ascend Money Group"
+                    },
+                    "bulletPoints": [],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002Fe2597258-df96-40d7-926a-2b4bbfcee199.2\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6290",
+                                "description": "งานวิศวกร - ซอฟต์แวร์"
+                            }
+                        }
+                    ],
+                    "companyName": "Ascend Group",
+                    "companyProfileStructuredDataId": 443910,
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "443910",
+                        "name": "Ascend Group",
+                        "companyId": "175386867587111",
+                        "companyUrl": "https:\u002F\u002Fth.jobsdb.com\u002Fcompanies\u002Fascend-group-175386867587111"
+                    },
+                    "id": "90437757",
+                    "isFeatured": false,
+                    "listingDate": "2026-02-19T06:42:21Z",
+                    "listingDateDisplay": "8 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "engineer",
+                    "salaryLabel": "",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "90437757",
+                        "section": "MAIN",
+                        "sectionRank": 4,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "0"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "SEEN",
+                            "label": "Seen"
+                        }
+                    ],
+                    "teaser": "Design and develop high-performance, scalable backend services using Go (Golang) within a microservices architecture.",
+                    "title": "Senior Engineer (Golang)",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfNCIKfQ==",
+                    "workTypes": [
+                        "งานเต็มเวลา"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "1",
+                                "label": {
+                                    "text": "เข้าออฟฟิศ"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "61190620",
+                        "description": "HUMANICA Public Company Limited"
+                    },
+                    "bulletPoints": [
+                        "Golang",
+                        "ReactJS"
+                    ],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002Fcbeb820f-9204-4030-bb20-95e7411cc102.1\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6287",
+                                "description": "งานโปรแกรมเมอร์"
+                            }
+                        }
+                    ],
+                    "companyName": "Humanica",
+                    "companyProfileStructuredDataId": 382945,
+                    "displayStyle": {
+                        "search": "sourcrProfile"
+                    },
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "382945",
+                        "name": "Humanica",
+                        "companyId": "171089995339241",
+                        "companyUrl": "https:\u002F\u002Fth.jobsdb.com\u002Fcompanies\u002Fhumanica-171089995339241"
+                    },
+                    "id": "90009449",
+                    "isFeatured": false,
+                    "listingDate": "2026-01-29T07:22:00Z",
+                    "listingDateDisplay": "29 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "ปทุมวัน กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "ปทุมวัน กรุงเทพมหานคร"
+                                },
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "go-software-developer",
+                    "salaryLabel": "",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "90009449",
+                        "section": "MAIN",
+                        "sectionRank": 5,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "0"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "SEEN",
+                            "label": "Seen"
+                        },
+                        {
+                            "type": "EXPIRES_SOON",
+                            "label": "ใกล้หมดอายุ"
+                        },
+                        {
+                            "type": "TOP_APPLICANT",
+                            "label": "โอกาสได้งานสูง"
+                        }
+                    ],
+                    "teaser": "Develop Web application by Go",
+                    "title": "Golang Developer (Bangkok \u002FChiangmai)",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfNSIKfQ==",
+                    "workTypes": [
+                        "งานเต็มเวลา"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "1",
+                                "label": {
+                                    "text": "เข้าออฟฟิศ"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "61254520",
+                        "description": "Primo World Co., Ltd."
+                    },
+                    "bulletPoints": [
+                        "Big Data & High-Performance Challenges",
+                        "Modern DevOps & Cloud-Native Culture",
+                        "Fast-Growing Startup Energy with Prime Location"
+                    ],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F1a621484-0f2c-4813-b028-364abe78c4d9.1\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6287",
+                                "description": "งานโปรแกรมเมอร์"
+                            }
+                        }
+                    ],
+                    "companyName": "Primo World",
+                    "companyProfileStructuredDataId": 681941,
+                    "displayStyle": {
+                        "search": "sourcrProfile"
+                    },
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "681941",
+                        "name": "Primo World"
+                    },
+                    "id": "90307308",
+                    "isFeatured": false,
+                    "listingDate": "2026-02-12T07:50:45Z",
+                    "listingDateDisplay": "15 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "บางรัก กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "บางรัก กรุงเทพมหานคร"
+                                },
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "go-software-developer",
+                    "salaryLabel": "",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "90307308",
+                        "section": "MAIN",
+                        "sectionRank": 6,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "0"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "SEEN",
+                            "label": "Seen"
+                        }
+                    ],
+                    "teaser": "We're hiring a Golang Developer to scale our high-impact marketing platform. If you love Golang, Kubernetes, and Agile—let’s talk!",
+                    "title": "Golang Developer",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfNiIKfQ==",
+                    "workTypes": [
+                        "งานเต็มเวลา"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "2",
+                                "label": {
+                                    "text": "ไฮบริด"
+                                }
+                            }
+                        ],
+                        "displayText": "ไฮบริด"
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "61914861",
+                        "description": "Adisoft Gaming Company Limited"
+                    },
+                    "bulletPoints": [],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002Fcb8b9ba4-6927-41a2-9765-da4c6e128350.2\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6287",
+                                "description": "งานโปรแกรมเมอร์"
+                            }
+                        }
+                    ],
+                    "companyName": "Adisoft",
+                    "companyProfileStructuredDataId": 743039,
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "743039",
+                        "name": "Adisoft"
+                    },
+                    "id": "90562207",
+                    "isFeatured": false,
+                    "listingDate": "2026-02-25T06:54:53Z",
+                    "listingDateDisplay": "2 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "บางเขน กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "บางเขน กรุงเทพมหานคร"
+                                },
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "backend-developer",
+                    "salaryLabel": "",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "90562207",
+                        "section": "MAIN",
+                        "sectionRank": 7,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "0"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "SEEN",
+                            "label": "Seen"
+                        }
+                    ],
+                    "teaser": "-",
+                    "title": "Backend Developer (Middle\u002FSenior)",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfNyIKfQ==",
+                    "workTypes": [
+                        "งานเต็มเวลา"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "1",
+                                "label": {
+                                    "text": "เข้าออฟฟิศ"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "60714601",
+                        "description": "Feedme POS Sdn. Bhd."
+                    },
+                    "bulletPoints": [
+                        "Competitive salary package and benefits",
+                        "Young and supportive culture",
+                        "Career development and training opportunities."
+                    ],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F06404a67-34d6-4e10-8cd6-a6cb883745e6.1\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6290",
+                                "description": "งานวิศวกร - ซอฟต์แวร์"
+                            }
+                        }
+                    ],
+                    "companyName": "Feedme POS Sdn. Bhd.",
+                    "companyProfileStructuredDataId": 621518,
+                    "displayStyle": {
+                        "search": "sourcrProfile"
+                    },
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "621518",
+                        "name": "Feedme POS Sdn. Bhd."
+                    },
+                    "id": "90623433",
+                    "isFeatured": false,
+                    "listingDate": "2026-02-27T10:28:30Z",
+                    "listingDateDisplay": "30 นาทีที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "software-engineer",
+                    "salaryLabel": "฿60,000 – ฿90,000 per month",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "90623433",
+                        "section": "MAIN",
+                        "sectionRank": 8,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "0"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "SEEN",
+                            "label": "Seen"
+                        },
+                        {
+                            "type": "EARLY_APPLICANT",
+                            "label": "สมัครงานนี้ก่อนใคร คลิก"
+                        }
+                    ],
+                    "teaser": "Join FeedMe’s Software Engineering team and build next-generation technologies that impact millions of users.",
+                    "title": "Senior Software Engineer",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfOCIKfQ==",
+                    "workTypes": [
+                        "งานเต็มเวลา"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "1",
+                                "label": {
+                                    "text": "เข้าออฟฟิศ"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "61236613",
+                        "description": "Central Retail Corporation Public Company Limited"
+                    },
+                    "bulletPoints": [
+                        "Full Stack (Golang & Vue)",
+                        "Retail\u002FE-Commerce Project",
+                        "Agile Mindset and young talented team"
+                    ],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F2dd16cdd-a730-4d87-a7d8-b4d2bc2e9bdb.1\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6287",
+                                "description": "งานโปรแกรมเมอร์"
+                            }
+                        }
+                    ],
+                    "companyName": "Central Retail Corporation",
+                    "companyProfileStructuredDataId": 444377,
+                    "displayStyle": {
+                        "search": "sourcrProfile"
+                    },
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "444377",
+                        "name": "Central Retail Corporation",
+                        "companyId": "172682107162152",
+                        "companyUrl": "https:\u002F\u002Fth.jobsdb.com\u002Fcompanies\u002Fcentral-retail-corporation-172682107162152"
+                    },
+                    "id": "90371642",
+                    "isFeatured": false,
+                    "listingDate": "2026-02-16T10:09:18Z",
+                    "listingDateDisplay": "11 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "บางรัก กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "บางรัก กรุงเทพมหานคร"
+                                },
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "full-stack-developer",
+                    "salaryLabel": "",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "90371642",
+                        "section": "MAIN",
+                        "sectionRank": 9,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "0"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "SEEN",
+                            "label": "Seen"
+                        }
+                    ],
+                    "teaser": "Develop and maintain reusable Golang and Vue\u002FNuxt applications, collaborate with product teams, review code, ensure agile practices.",
+                    "title": "Full Stack Developer (Golang & Vue)",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfOSIKfQ==",
+                    "workTypes": [
+                        "งานเต็มเวลา"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "1",
+                                "label": {
+                                    "text": "เข้าออฟฟิศ"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "60285204",
+                        "description": "ANCOR THAILAND"
+                    },
+                    "bulletPoints": [
+                        "Minimum 1 month bonus guaranteed",
+                        "Good spoken English is a plus",
+                        "Provident fund"
+                    ],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002Fb6dafcde-842e-4a6d-a15f-0c571c1dc307.1\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6287",
+                                "description": "งานโปรแกรมเมอร์"
+                            }
+                        }
+                    ],
+                    "companyName": "Ancor Thailand",
+                    "companyProfileStructuredDataId": 449670,
+                    "displayStyle": {
+                        "search": "sourcrProfile"
+                    },
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "449670",
+                        "name": "Ancor Thailand"
+                    },
+                    "id": "90307508",
+                    "isFeatured": false,
+                    "listingDate": "2026-02-12T07:57:05Z",
+                    "listingDateDisplay": "15 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "backend-developer",
+                    "salaryLabel": "",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "90307508",
+                        "section": "MAIN",
+                        "sectionRank": 10,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "0"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "SEEN",
+                            "label": "Seen"
+                        },
+                        {
+                            "type": "TOP_APPLICANT",
+                            "label": "โอกาสได้งานสูง"
+                        }
+                    ],
+                    "teaser": "We are seeking candidates who are driven and determined. If you aspire to be the best software\r\ndeveloper, software tester",
+                    "title": "Intermediate \u002F Junior Developer (Backend)",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfMTAiCn0=",
+                    "workTypes": [
+                        "งานเต็มเวลา"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "1",
+                                "label": {
+                                    "text": "เข้าออฟฟิศ"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "60216724",
+                        "description": "The Siam Cement Public Company Limited (SCG)"
+                    },
+                    "bulletPoints": [
+                        "Full-Stack Developer",
+                        "AI, cloud platforms",
+                        "Computer Science"
+                    ],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002Fe69f7fcd-10a4-47a8-a050-18578eeaa6ee.1\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6290",
+                                "description": "งานวิศวกร - ซอฟต์แวร์"
+                            }
+                        }
+                    ],
+                    "companyName": "The Siam Cement",
+                    "companyProfileStructuredDataId": 448691,
+                    "displayStyle": {
+                        "search": "sourcrProfile"
+                    },
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "448691",
+                        "name": "The Siam Cement",
+                        "companyId": "175272337488849",
+                        "companyUrl": "https:\u002F\u002Fth.jobsdb.com\u002Fcompanies\u002Fthe-siam-cement-175272337488849"
+                    },
+                    "id": "90309959",
+                    "isFeatured": false,
+                    "listingDate": "2026-02-12T09:31:01Z",
+                    "listingDateDisplay": "15 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "full-stack-developer",
+                    "salaryLabel": "",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "90309959",
+                        "section": "MAIN",
+                        "sectionRank": 11,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "0"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "SEEN",
+                            "label": "Seen"
+                        }
+                    ],
+                    "teaser": "Develop and deploy end-to-end full stack applications (frontend, backend, database).",
+                    "title": "Full-Stack Developer – SCG International",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfMTEiCn0=",
+                    "workTypes": [
+                        "งานเต็มเวลา"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "1",
+                                "label": {
+                                    "text": "เข้าออฟฟิศ"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "61226387",
+                        "description": "GMM O Shopping Co., Ltd."
+                    },
+                    "bulletPoints": [
+                        "1 yr exp. with Golang, Vue.js or React.js.",
+                        "5-day work week, Life \u002F Medical \u002F Dental insurance.",
+                        "Good attitude, team work and desire to learn new technologies."
+                    ],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002Fbc00bd30-a281-47d8-9655-a6130d72d0d2.1\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6290",
+                                "description": "งานวิศวกร - ซอฟต์แวร์"
+                            }
+                        }
+                    ],
+                    "companyName": "GMM O Shopping Co., Ltd.",
+                    "companyProfileStructuredDataId": 685644,
+                    "displayStyle": {
+                        "search": "sourcrProfile"
+                    },
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "685644",
+                        "name": "GMM O Shopping Co., Ltd."
+                    },
+                    "id": "90282404",
+                    "isFeatured": false,
+                    "listingDate": "2026-02-11T09:25:12Z",
+                    "listingDateDisplay": "16 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "วัฒนา กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "วัฒนา กรุงเทพมหานคร"
+                                },
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "front-end-engineer",
+                    "salaryLabel": "",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "90282404",
+                        "section": "MAIN",
+                        "sectionRank": 12,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "0"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "SEEN",
+                            "label": "Seen"
+                        }
+                    ],
+                    "teaser": "Responsibilities:\n Develop new\u002Fenhancement functionality change in OSP’s e-Commerce Website,  Sale Order and Fulfillment system.",
+                    "title": "Full Stack \u002F Frontend Engineer (Vue.js & Golang).",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfMTIiCn0=",
+                    "workTypes": [
+                        "งานเต็มเวลา"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "1",
+                                "label": {
+                                    "text": "เข้าออฟฟิศ"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "61700045",
+                        "description": "ZILO ASIA CO., LTD."
+                    },
+                    "bulletPoints": [],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F9d9d5526-859e-469a-aa1d-17b24ae4285f.2\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6287",
+                                "description": "งานโปรแกรมเมอร์"
+                            }
+                        }
+                    ],
+                    "companyName": "Zilo",
+                    "companyProfileStructuredDataId": 692747,
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "692747",
+                        "name": "Zilo"
+                    },
+                    "id": "90567334",
+                    "isFeatured": false,
+                    "listingDate": "2026-02-25T09:55:30Z",
+                    "listingDateDisplay": "2 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "คลองเตย กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "คลองเตย กรุงเทพมหานคร"
+                                },
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "full-stack-software-engineer",
+                    "salaryLabel": "",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "90567334",
+                        "section": "MAIN",
+                        "sectionRank": 13,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "0"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "UNSEEN",
+                            "label": "ใหม่สำหรับคุณ"
+                        }
+                    ],
+                    "teaser": "International working environment, attractive benefits and welfare, including 38 days of annual leave, provident fund, medical & life insurance etc.",
+                    "title": "Full-stack Software Engineer",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfMTMiCn0=",
+                    "workTypes": [
+                        "งานเต็มเวลา"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "2",
+                                "label": {
+                                    "text": "ไฮบริด"
+                                }
+                            }
+                        ],
+                        "displayText": "ไฮบริด"
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "61238140",
+                        "description": "Kiatnakin Phatra Securities Public Company Limited"
+                    },
+                    "bulletPoints": [
+                        "Experience in Golang, React, and JavaScript is preferred.",
+                        "Experience in Flutter, native iOS, and Android application is preferred."
+                    ],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F54edafb2-c43d-4d51-a8a6-1c72531fb111.1\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6295",
+                                "description": "งานบริหารจัดการโปรแกรมและโปรเจกต์"
+                            }
+                        }
+                    ],
+                    "companyName": "Kiatnakin Phatra Financial Group",
+                    "companyProfileStructuredDataId": 446100,
+                    "displayStyle": {
+                        "search": "sourcrProfile"
+                    },
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "446100",
+                        "name": "Kiatnakin Phatra Financial Group",
+                        "companyId": "172130005032464",
+                        "companyUrl": "https:\u002F\u002Fth.jobsdb.com\u002Fcompanies\u002Fkiatnakin-phatra-financial-group-172130005032464"
+                    },
+                    "id": "90613579",
+                    "isFeatured": false,
+                    "listingDate": "2026-02-27T04:49:21Z",
+                    "listingDateDisplay": "6 ชั่วโมงที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "software-engineer",
+                    "salaryLabel": "",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "90613579",
+                        "section": "MAIN",
+                        "sectionRank": 14,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "0"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "NEW",
+                            "label": "ใหม่สำหรับคุณ"
+                        }
+                    ],
+                    "teaser": "We are looking for a skilled developer to design, develop, and maintain both frontend and backend services of our mobile financial application.",
+                    "title": "Software Engineer Middle - Senior  (KKP Dime)",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfMTQiCn0=",
+                    "workTypes": [
+                        "งานเต็มเวลา"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "1",
+                                "label": {
+                                    "text": "เข้าออฟฟิศ"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "62161649",
+                        "description": "TOKEN X CO., LTD. (Head Office)"
+                    },
+                    "bulletPoints": [],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F6d1749e8-8b9f-4595-9421-252054024fc9.1\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6290",
+                                "description": "งานวิศวกร - ซอฟต์แวร์"
+                            }
+                        }
+                    ],
+                    "companyName": "Token X Co., Ltd.",
+                    "companyProfileStructuredDataId": 3053969,
+                    "displayStyle": {
+                        "search": "sourcrProfile"
+                    },
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "3053969",
+                        "name": "Token X Co., Ltd."
+                    },
+                    "id": "90522046",
+                    "isFeatured": false,
+                    "listingDate": "2026-02-24T02:29:44Z",
+                    "listingDateDisplay": "3 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "software-engineer",
+                    "salaryLabel": "",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "90522046",
+                        "section": "MAIN",
+                        "sectionRank": 15,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "0"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "SEEN",
+                            "label": "Seen"
+                        }
+                    ],
+                    "teaser": "Blockchain , Smart Contract development, Web3, digital asset",
+                    "title": "Senior Software Engineer",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfMTUiCn0=",
+                    "workTypes": [
+                        "งานเต็มเวลา"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "2",
+                                "label": {
+                                    "text": "ไฮบริด"
+                                }
+                            }
+                        ],
+                        "displayText": "ไฮบริด"
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "60287339",
+                        "description": "Adecco Recruitment (Thailand) Limited"
+                    },
+                    "bulletPoints": [
+                        "Opportunity to work with cutting-edge web and mobile technologies."
+                    ],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F8335f4ba-3266-40a4-8929-1c2c46939ab5.1\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6290",
+                                "description": "งานวิศวกร - ซอฟต์แวร์"
+                            }
+                        }
+                    ],
+                    "companyName": "Adecco",
+                    "companyProfileStructuredDataId": 3573,
+                    "displayStyle": {
+                        "search": "sourcrProfile"
+                    },
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "3573",
+                        "name": "Adecco"
+                    },
+                    "id": "90555369",
+                    "isFeatured": false,
+                    "listingDate": "2026-02-25T03:46:07Z",
+                    "listingDateDisplay": "2 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "full-stack-software-engineer",
+                    "salaryLabel": "",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "90555369",
+                        "section": "MAIN",
+                        "sectionRank": 16,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "0"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "UNSEEN",
+                            "label": "ใหม่สำหรับคุณ"
+                        }
+                    ],
+                    "teaser": "Responsible for developing and maintaining full-stack applications to support digital platforms and enhance overall business operations.",
+                    "title": "Full-Stack Engineer",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfMTYiCn0=",
+                    "workTypes": [
+                        "งานเต็มเวลา"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "1",
+                                "label": {
+                                    "text": "เข้าออฟฟิศ"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "61511669",
+                        "description": "SCB DataX Co., Ltd."
+                    },
+                    "bulletPoints": [
+                        "AI Initiatives",
+                        "Modern tech stack and best engineering practices",
+                        "Opportunity to grow your engineering skills and career path"
+                    ],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F71d5989c-a1b3-4b3b-a50a-87d763302793.1\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6290",
+                                "description": "งานวิศวกร - ซอฟต์แวร์"
+                            }
+                        }
+                    ],
+                    "companyName": "SCB DataX",
+                    "companyProfileStructuredDataId": 679633,
+                    "displayStyle": {
+                        "search": "sourcrProfile"
+                    },
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "679633",
+                        "name": "SCB DataX",
+                        "companyId": "175318383361108",
+                        "companyUrl": "https:\u002F\u002Fth.jobsdb.com\u002Fcompanies\u002Fscb-datax-175318383361108"
+                    },
+                    "id": "89871258",
+                    "isFeatured": false,
+                    "listingDate": "2026-01-30T06:49:42Z",
+                    "listingDateDisplay": "28 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "Artificial-Intelligence-Engineer",
+                    "salaryLabel": "",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "89871258",
+                        "section": "MAIN",
+                        "sectionRank": 17,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "0"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "SEEN",
+                            "label": "Seen"
+                        },
+                        {
+                            "type": "EXPIRES_SOON",
+                            "label": "ใกล้หมดอายุ"
+                        }
+                    ],
+                    "teaser": "Develop full-stack GenAI applications using Go, Python, and TypeScript in a dynamic, cross-functional product team.",
+                    "title": "Software Engineer (AI Application) All Level",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfMTciCn0=",
+                    "workTypes": [
+                        "งานเต็มเวลา"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "2",
+                                "label": {
+                                    "text": "ไฮบริด"
+                                }
+                            }
+                        ],
+                        "displayText": "ไฮบริด"
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "62340975",
+                        "description": "CGP Recruitment (Thailand) Company Limited"
+                    },
+                    "bulletPoints": [
+                        "Work with a Leading Company in Thailand",
+                        "Hybrid Working Environment",
+                        "Professional Development"
+                    ],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002Fcea17b6f-41f0-4e4c-85eb-9746fe8fffc3.1\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6290",
+                                "description": "งานวิศวกร - ซอฟต์แวร์"
+                            }
+                        }
+                    ],
+                    "companyName": "Cornerstone Global Partners",
+                    "companyProfileStructuredDataId": 380573,
+                    "displayStyle": {
+                        "search": "sourcrProfile"
+                    },
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "380573",
+                        "name": "Cornerstone Global Partners"
+                    },
+                    "id": "90027511",
+                    "isFeatured": false,
+                    "listingDate": "2026-01-30T03:13:22Z",
+                    "listingDateDisplay": "28 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "python-engineer",
+                    "salaryLabel": "",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "90027511",
+                        "section": "MAIN",
+                        "sectionRank": 18,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "0"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "UNSEEN",
+                            "label": "ใหม่สำหรับคุณ"
+                        },
+                        {
+                            "type": "EXPIRES_SOON",
+                            "label": "ใกล้หมดอายุ"
+                        }
+                    ],
+                    "teaser": "Backend-focused Software Engineer responsible for designing, building, and maintaining scalable systems using Python, Node.js, Go, or Rust.",
+                    "title": "Software Engineer - Python, Node.js, Go or Rush",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfMTgiCn0=",
+                    "workTypes": [
+                        "งานเต็มเวลา"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "2",
+                                "label": {
+                                    "text": "ไฮบริด"
+                                }
+                            }
+                        ],
+                        "displayText": "ไฮบริด"
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "62340975",
+                        "description": "CGP Recruitment (Thailand) Company Limited"
+                    },
+                    "bulletPoints": [
+                        "Work with a Leading Company in Thailand",
+                        "Competitive Compensation and Benefits",
+                        "Professional Development"
+                    ],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002Fcea17b6f-41f0-4e4c-85eb-9746fe8fffc3.1\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6287",
+                                "description": "งานโปรแกรมเมอร์"
+                            }
+                        }
+                    ],
+                    "companyName": "Cornerstone Global Partners",
+                    "companyProfileStructuredDataId": 380573,
+                    "displayStyle": {
+                        "search": "sourcrProfile"
+                    },
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "380573",
+                        "name": "Cornerstone Global Partners"
+                    },
+                    "id": "89113077",
+                    "isFeatured": false,
+                    "listingDate": "2026-02-09T11:11:34Z",
+                    "listingDateDisplay": "17 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "Full-Stack-React-Developer",
+                    "salaryLabel": "",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "89113077",
+                        "section": "MAIN",
+                        "sectionRank": 19,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "0"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "UNSEEN",
+                            "label": "ใหม่สำหรับคุณ"
+                        }
+                    ],
+                    "teaser": "Seeking a Full Stack Developer skilled in building modern web and mobile applications. Work across Next.js frontend, Golang Fiber.",
+                    "title": "Full Stack Developer (React.js, Golang)",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfMTkiCn0=",
+                    "workTypes": [
+                        "งานเต็มเวลา"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "2",
+                                "label": {
+                                    "text": "ไฮบริด"
+                                }
+                            }
+                        ],
+                        "displayText": "ไฮบริด"
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "62026721",
+                        "description": "T.C.C. Technology Co., Ltd."
+                    },
+                    "bulletPoints": [],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F623382b2-0933-4ea7-95db-35de0172a9e3.1\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6287",
+                                "description": "งานโปรแกรมเมอร์"
+                            }
+                        }
+                    ],
+                    "companyName": "T.C.C. Technology",
+                    "companyProfileStructuredDataId": 448348,
+                    "displayStyle": {
+                        "search": "sourcrProfile"
+                    },
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "448348",
+                        "name": "T.C.C. Technology"
+                    },
+                    "id": "90405778",
+                    "isFeatured": false,
+                    "listingDate": "2026-02-18T03:18:30Z",
+                    "listingDateDisplay": "9 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "บางรัก กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "บางรัก กรุงเทพมหานคร"
+                                },
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "applications-developer",
+                    "salaryLabel": "",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "90405778",
+                        "section": "MAIN",
+                        "sectionRank": 20,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "0"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "SEEN",
+                            "label": "Seen"
+                        }
+                    ],
+                    "teaser": "Lead backend development, build reliable APIs, and solve complex challenges to support high‑growth products and modern architectures.",
+                    "title": "Senior Application Developer (Backend)",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfMjAiCn0=",
+                    "workTypes": [
+                        "งานสัญญาจ้าง"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "2",
+                                "label": {
+                                    "text": "ไฮบริด"
+                                }
+                            }
+                        ],
+                        "displayText": "ไฮบริด"
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "63522910",
+                        "description": "3 TECH CONSULTING CO.,LTD."
+                    },
+                    "bulletPoints": [],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F8e86829e-1a74-4b9f-95b6-3c0893a51b57.2\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6290",
+                                "description": "งานวิศวกร - ซอฟต์แวร์"
+                            }
+                        }
+                    ],
+                    "companyProfileStructuredDataId": 0,
+                    "displayType": "standard",
+                    "id": "90368554",
+                    "isFeatured": false,
+                    "listingDate": "2026-02-16T08:06:29Z",
+                    "listingDateDisplay": "11 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "engineering",
+                    "salaryLabel": "฿40,000 – ฿60,000 per month",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "90368554",
+                        "section": "MAIN",
+                        "sectionRank": 21,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "0"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "SEEN",
+                            "label": "Seen"
+                        }
+                    ],
+                    "teaser": "We are seeking a talented Software Engineering who is passionate about building scalable, high-quality solutions that make a real impact.",
+                    "title": "Software Engineering",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfMjEiCn0=",
+                    "workTypes": [
+                        "งานสัญญาจ้าง"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "1",
+                                "label": {
+                                    "text": "เข้าออฟฟิศ"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "61238140",
+                        "description": "Kiatnakin Phatra Securities Public Company Limited"
+                    },
+                    "bulletPoints": [],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002Fb2609a19-adf3-408a-9556-2d0d0e36a081.1\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6290",
+                                "description": "งานวิศวกร - ซอฟต์แวร์"
+                            }
+                        }
+                    ],
+                    "companyName": "Kiatnakin Phatra Financial Group",
+                    "companyProfileStructuredDataId": 446100,
+                    "displayStyle": {
+                        "search": "sourcrProfile"
+                    },
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "446100",
+                        "name": "Kiatnakin Phatra Financial Group",
+                        "companyId": "172130005032464",
+                        "companyUrl": "https:\u002F\u002Fth.jobsdb.com\u002Fcompanies\u002Fkiatnakin-phatra-financial-group-172130005032464"
+                    },
+                    "id": "90305906",
+                    "isFeatured": false,
+                    "listingDate": "2026-02-12T06:57:54Z",
+                    "listingDateDisplay": "15 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "software-engineer",
+                    "salaryLabel": "",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "90305906",
+                        "section": "MAIN",
+                        "sectionRank": 22,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "0"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "SEEN",
+                            "label": "Seen"
+                        }
+                    ],
+                    "teaser": "We are seeking an experienced and passionate Senior Backend Engineer to join our technology team and drive the development of financial platforms.",
+                    "title": "Senior Software Engineer (KKPS)",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfMjIiCn0=",
+                    "workTypes": [
+                        "งานเต็มเวลา"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "2",
+                                "label": {
+                                    "text": "ไฮบริด"
+                                }
+                            }
+                        ],
+                        "displayText": "ไฮบริด"
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "61186260",
+                        "description": "True Corporation Public Company Limited"
+                    },
+                    "bulletPoints": [
+                        "Experience as a Fullstack Developer or Software Engineer",
+                        "Supporting the TID and TVS teams under the \"Platform as a Service\" initiative",
+                        "Allowance, Flexible working hours and Work from home"
+                    ],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F0af6368d-ff5b-4a81-be19-8cb5480942c2.1\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6290",
+                                "description": "งานวิศวกร - ซอฟต์แวร์"
+                            }
+                        }
+                    ],
+                    "companyName": "True Corporation",
+                    "companyProfileStructuredDataId": 448870,
+                    "displayStyle": {
+                        "search": "sourcrProfile"
+                    },
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "448870",
+                        "name": "True Corporation",
+                        "companyId": "174548192676080",
+                        "companyUrl": "https:\u002F\u002Fth.jobsdb.com\u002Fcompanies\u002Ftrue-corporation-174548192676080"
+                    },
+                    "id": "90340258",
+                    "isFeatured": false,
+                    "listingDate": "2026-02-13T14:02:29Z",
+                    "listingDateDisplay": "13 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "full-stack-developer",
+                    "salaryLabel": "",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "90340258",
+                        "section": "MAIN",
+                        "sectionRank": 23,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "0"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "SEEN",
+                            "label": "Seen"
+                        }
+                    ],
+                    "teaser": "Maintaining and improving platform-level systems, ensuring stability, reliability, scalability, and developer productivity.",
+                    "title": "Senior Associate, Fullstack Developer",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfMjMiCn0=",
+                    "workTypes": [
+                        "งานเต็มเวลา"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "2",
+                                "label": {
+                                    "text": "ไฮบริด"
+                                }
+                            }
+                        ],
+                        "displayText": "ไฮบริด"
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "61232434",
+                        "description": "Finnomena Co., Ltd."
+                    },
+                    "bulletPoints": [
+                        "Work from home, Flexible working hours, 5-day work week",
+                        "Provident Fund, Flexible Benefit, Health insurance, Dental insurance",
+                        "Ordination leave, Annual trip or party"
+                    ],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002Fc7485054-44d8-4c66-b1ab-bba19a6a70b1.1\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6290",
+                                "description": "งานวิศวกร - ซอฟต์แวร์"
+                            }
+                        }
+                    ],
+                    "companyName": "Finnomena",
+                    "companyProfileStructuredDataId": 444968,
+                    "displayStyle": {
+                        "search": "sourcrProfile"
+                    },
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "444968",
+                        "name": "Finnomena"
+                    },
+                    "id": "90535954",
+                    "isFeatured": false,
+                    "listingDate": "2026-02-24T08:38:57Z",
+                    "listingDateDisplay": "3 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "software-engineer",
+                    "salaryLabel": "",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "90535954",
+                        "section": "MAIN",
+                        "sectionRank": 24,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "1"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "SEEN",
+                            "label": "Seen"
+                        }
+                    ],
+                    "teaser": "Build and optimize full-stack systems, lead technical strategy, mentor engineers, and deliver scalable solutions",
+                    "title": "Senior Software Engineer",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfMjQiCn0=",
+                    "workTypes": [
+                        "งานเต็มเวลา"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "2",
+                                "label": {
+                                    "text": "ไฮบริด"
+                                }
+                            }
+                        ],
+                        "displayText": "ไฮบริด"
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "60296840",
+                        "description": "Data Wow Co., Ltd."
+                    },
+                    "bulletPoints": [],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F93ce93ae-37c6-4652-877b-8a36c0a521a6.1\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6290",
+                                "description": "งานวิศวกร - ซอฟต์แวร์"
+                            }
+                        }
+                    ],
+                    "companyName": "Data Wow",
+                    "companyProfileStructuredDataId": 449725,
+                    "displayStyle": {
+                        "search": "sourcrProfile"
+                    },
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "449725",
+                        "name": "Data Wow"
+                    },
+                    "id": "90334300",
+                    "isFeatured": false,
+                    "listingDate": "2026-02-13T07:55:39Z",
+                    "listingDateDisplay": "14 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "ปทุมวัน กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "ปทุมวัน กรุงเทพมหานคร"
+                                },
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "full-stack-developer",
+                    "salaryLabel": "",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "90334300",
+                        "section": "MAIN",
+                        "sectionRank": 25,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "0"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "SEEN",
+                            "label": "Seen"
+                        }
+                    ],
+                    "teaser": "Join our fast-paced startup as a Full Stack Developer in a hybrid work environment, and grow alongside a passionate, collaborative team.",
+                    "title": "Full Stack Developer (Fulltime\u002FContract)",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfMjUiCn0=",
+                    "workTypes": [
+                        "งานสัญญาจ้าง"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "2",
+                                "label": {
+                                    "text": "ไฮบริด"
+                                }
+                            }
+                        ],
+                        "displayText": "ไฮบริด"
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "62019790",
+                        "description": "Bank of Ayudhya Public Company Limited"
+                    },
+                    "bulletPoints": [
+                        "Engineering Manager , Technical Lead",
+                        "C#, .Net, GoLang, MS SQL",
+                        "Good in English skill in written and speaking"
+                    ],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F780599c9-8356-425f-85f7-d264c8c50852.1\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6290",
+                                "description": "งานวิศวกร - ซอฟต์แวร์"
+                            }
+                        }
+                    ],
+                    "companyName": "Krungsri Bank",
+                    "companyProfileStructuredDataId": 444091,
+                    "displayStyle": {
+                        "search": "sourcrProfile"
+                    },
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "444091",
+                        "name": "Krungsri Bank",
+                        "companyId": "171921021061688",
+                        "companyUrl": "https:\u002F\u002Fth.jobsdb.com\u002Fcompanies\u002Fkrungsri-bank-171921021061688"
+                    },
+                    "id": "90430150",
+                    "isFeatured": false,
+                    "listingDate": "2026-02-19T02:58:53Z",
+                    "listingDateDisplay": "8 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "ยานนาวา กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "ยานนาวา กรุงเทพมหานคร"
+                                },
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "technical-lead",
+                    "salaryLabel": "",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "90430150",
+                        "section": "MAIN",
+                        "sectionRank": 26,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "0"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "UNSEEN",
+                            "label": "ใหม่สำหรับคุณ"
+                        }
+                    ],
+                    "teaser": "To lead, manage and support development team for implementing commercial banking digital solution by focusing on web application.",
+                    "title": "Tech Lead - Krungsri Nimble",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfMjYiCn0=",
+                    "workTypes": [
+                        "งานเต็มเวลา"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "2",
+                                "label": {
+                                    "text": "ไฮบริด"
+                                }
+                            }
+                        ],
+                        "displayText": "ไฮบริด"
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "61217219",
+                        "description": "RIVER PARK INNODIGITAL CO., LTD."
+                    },
+                    "bulletPoints": [],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002Ffa803241-0100-4d92-8ce1-d230e0ea3f41.2\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6290",
+                                "description": "งานวิศวกร - ซอฟต์แวร์"
+                            }
+                        }
+                    ],
+                    "companyProfileStructuredDataId": 0,
+                    "displayType": "standard",
+                    "id": "86613187",
+                    "isFeatured": false,
+                    "listingDate": "2026-02-12T06:10:20Z",
+                    "listingDateDisplay": "15 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "พญาไท กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "พญาไท กรุงเทพมหานคร"
+                                },
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "full-stack-developer",
+                    "salaryLabel": "฿25,000 – ฿35,000 per month",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "86613187",
+                        "section": "MAIN",
+                        "sectionRank": 27,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "1"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "SEEN",
+                            "label": "Seen"
+                        },
+                        {
+                            "type": "TOP_APPLICANT",
+                            "label": "โอกาสได้งานสูง"
+                        }
+                    ],
+                    "teaser": "สามารถเริ่มงานได้ทันทีจะพิจารณาเป็นพิเศษ",
+                    "title": "Full Stack Developer",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfMjciCn0=",
+                    "workTypes": [
+                        "งานสัญญาจ้าง"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "2",
+                                "label": {
+                                    "text": "ไฮบริด"
+                                }
+                            }
+                        ],
+                        "displayText": "ไฮบริด"
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "60216537",
+                        "description": "Sellsuki Co., Ltd."
+                    },
+                    "bulletPoints": [
+                        "Hybrid Working",
+                        "ทำงาน 5 วันต่อสัปดาห์",
+                        "ประกันกลุ่ม"
+                    ],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002Fb377667c-f68f-4cb0-ac11-8ff06e069c43.1\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6290",
+                                "description": "งานวิศวกร - ซอฟต์แวร์"
+                            }
+                        }
+                    ],
+                    "companyName": "Sellsuki",
+                    "companyProfileStructuredDataId": 447945,
+                    "displayStyle": {
+                        "search": "sourcrProfile"
+                    },
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "447945",
+                        "name": "Sellsuki",
+                        "companyId": "173165253155385",
+                        "companyUrl": "https:\u002F\u002Fth.jobsdb.com\u002Fcompanies\u002Fsellsuki-173165253155385"
+                    },
+                    "id": "90350000",
+                    "isFeatured": false,
+                    "listingDate": "2026-02-15T12:48:45Z",
+                    "listingDateDisplay": "11 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "จตุจักร กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "จตุจักร กรุงเทพมหานคร"
+                                },
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "full-stack-developer",
+                    "salaryLabel": "฿47,000 – ฿63,000 per month",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "90350000",
+                        "section": "MAIN",
+                        "sectionRank": 28,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "0"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "SEEN",
+                            "label": "Seen"
+                        }
+                    ],
+                    "teaser": "We're looking for a skilled developer to help us build and innovate. You'll work in a collaborative environment with great opportunities for growth.",
+                    "title": "Senior Full Stack Developer",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfMjgiCn0=",
+                    "workTypes": [
+                        "งานเต็มเวลา"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "2",
+                                "label": {
+                                    "text": "ไฮบริด"
+                                }
+                            }
+                        ],
+                        "displayText": "ไฮบริด"
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "60186607",
+                        "description": "Muang Thai Life Assurance Public Company Limited"
+                    },
+                    "bulletPoints": [
+                        "Hybrid Office",
+                        "Learning and Career Development opportunity",
+                        "Flexible Benefits"
+                    ],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F15e6f40d-b6be-4223-bdb6-1256d6eac367.1\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6283",
+                                "description": "งานนักวิเคราะห์ธุรกิจ\u002Fงานนักวิเคราะห์ระบบ"
+                            }
+                        }
+                    ],
+                    "companyName": "Muang Thai Life Assurance",
+                    "companyProfileStructuredDataId": 446648,
+                    "displayStyle": {
+                        "search": "sourcrProfile"
+                    },
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "446648",
+                        "name": "Muang Thai Life Assurance"
+                    },
+                    "id": "90013196",
+                    "isFeatured": false,
+                    "listingDate": "2026-01-29T09:48:12Z",
+                    "listingDateDisplay": "29 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "ห้วยขวาง กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "ห้วยขวาง กรุงเทพมหานคร"
+                                },
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "systems-analyst",
+                    "salaryLabel": "",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "90013196",
+                        "section": "MAIN",
+                        "sectionRank": 29,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "1"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "SEEN",
+                            "label": "Seen"
+                        },
+                        {
+                            "type": "EXPIRES_SOON",
+                            "label": "ใกล้หมดอายุ"
+                        }
+                    ],
+                    "teaser": "Develop and maintain programs to support any working tasks.\nManage and facilitate stakeholders",
+                    "title": "System Analyst (C#.Net)",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfMjkiCn0=",
+                    "workTypes": [
+                        "งานเต็มเวลา"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "2",
+                                "label": {
+                                    "text": "ไฮบริด"
+                                }
+                            }
+                        ],
+                        "displayText": "ไฮบริด"
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "61189999",
+                        "description": "Aksorn Charoentat Act Co., Ltd."
+                    },
+                    "bulletPoints": [],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002Fdc0046a5-6460-48b2-81c5-3087870bad34.1\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6292",
+                                "description": "งานบริหาร"
+                            }
+                        }
+                    ],
+                    "companyName": "Aksorn Charoentat Act",
+                    "companyProfileStructuredDataId": 443784,
+                    "displayStyle": {
+                        "search": "sourcrProfile"
+                    },
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "443784",
+                        "name": "Aksorn Charoentat Act"
+                    },
+                    "id": "90467843",
+                    "isFeatured": false,
+                    "listingDate": "2026-02-21T08:19:48Z",
+                    "listingDateDisplay": "6 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "พระนคร กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "พระนคร กรุงเทพมหานคร"
+                                },
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "Associate-Director",
+                    "salaryLabel": "฿135,000 – ฿180,000 per month",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "90467843",
+                        "section": "MAIN",
+                        "sectionRank": 30,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "0"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "SEEN",
+                            "label": "Seen"
+                        }
+                    ],
+                    "teaser": "Associate Director นำทีม 30+ (Dev\u002FQA\u002FUX\u002FPO) สร้างแพลตฟอร์มเรียนรู้ดิจิทัล \nGolang React PG Tech 50%  Mgmt 30%  Coach 20% 15+ ปี  38-42 ปี | AI\u002FAgile",
+                    "title": "Associate Director",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfMzAiCn0=",
+                    "workTypes": [
+                        "งานเต็มเวลา"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "1",
+                                "label": {
+                                    "text": "เข้าออฟฟิศ"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "62026721",
+                        "description": "T.C.C. Technology Co., Ltd."
+                    },
+                    "bulletPoints": [
+                        "Lead Impactful System Architecture",
+                        "Ownership & Technical Leadership",
+                        "Work With Modern Technologies"
+                    ],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F623382b2-0933-4ea7-95db-35de0172a9e3.1\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6290",
+                                "description": "งานวิศวกร - ซอฟต์แวร์"
+                            }
+                        }
+                    ],
+                    "companyName": "T.C.C. Technology",
+                    "companyProfileStructuredDataId": 448348,
+                    "displayStyle": {
+                        "search": "sourcrProfile"
+                    },
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "448348",
+                        "name": "T.C.C. Technology"
+                    },
+                    "id": "90405388",
+                    "isFeatured": false,
+                    "listingDate": "2026-02-18T03:06:54Z",
+                    "listingDateDisplay": "9 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "บางรัก กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "บางรัก กรุงเทพมหานคร"
+                                },
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "software-architect",
+                    "salaryLabel": "",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "90405388",
+                        "section": "MAIN",
+                        "sectionRank": 31,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "0"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "SEEN",
+                            "label": "Seen"
+                        }
+                    ],
+                    "teaser": "Lead backend architecture, define technical standards, and build secure, scalable systems while guiding team growth.",
+                    "title": "Software Architect",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfMzEiCn0=",
+                    "workTypes": [
+                        "งานเต็มเวลา"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "2",
+                                "label": {
+                                    "text": "ไฮบริด"
+                                }
+                            }
+                        ],
+                        "displayText": "ไฮบริด"
+                    }
+                },
+                {
+                    "advertiser": {
+                        "id": "61700045",
+                        "description": "ZILO ASIA CO., LTD."
+                    },
+                    "bulletPoints": [],
+                    "branding": {
+                        "serpLogoUrl": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F9d9d5526-859e-469a-aa1d-17b24ae4285f.2\u002FjdpLogo"
+                    },
+                    "classifications": [
+                        {
+                            "classification": {
+                                "id": "6281",
+                                "description": "งานไอที งานเทคโนโลยีสื่อสาร"
+                            },
+                            "subclassification": {
+                                "id": "6291",
+                                "description": "งาน Help Desk งาน IT Support"
+                            }
+                        }
+                    ],
+                    "companyName": "Zilo",
+                    "companyProfileStructuredDataId": 692747,
+                    "displayType": "standard",
+                    "employer": {
+                        "id": "692747",
+                        "name": "Zilo"
+                    },
+                    "id": "90567013",
+                    "isFeatured": false,
+                    "listingDate": "2026-02-25T09:40:18Z",
+                    "listingDateDisplay": "2 วันที่ผ่านมา",
+                    "locations": [
+                        {
+                            "label": "คลองเตย กรุงเทพมหานคร",
+                            "countryCode": "TH",
+                            "seoHierarchy": [
+                                {
+                                    "contextualName": "คลองเตย กรุงเทพมหานคร"
+                                },
+                                {
+                                    "contextualName": "กรุงเทพมหานคร"
+                                }
+                            ]
+                        }
+                    ],
+                    "roleId": "application-support-engineer",
+                    "salaryLabel": "",
+                    "solMetadata": {
+                        "searchRequestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+                        "jobId": "90567013",
+                        "section": "MAIN",
+                        "sectionRank": 32,
+                        "jobAdType": "ORGANIC",
+                        "tags": {
+                            "mordor__flights": "mordor_808",
+                            "mordor__s": "1"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "type": "SEEN",
+                            "label": "Seen"
+                        }
+                    ],
+                    "teaser": "About this role \r\n\r\nWe are seeking a talented and experienced Application Support Engineer to join our growing team.\r\n\r\n\r\nAs an Application Support...",
+                    "title": "SRE - Application Support Engineer",
+                    "tracking": "ewogICJ0b2tlbiI6ICIwMzI5NmJmNS02ZjY4LTQwZmMtOGVjOS02MjEwZWE0MjI4N2JfMzIiCn0=",
+                    "workTypes": [
+                        "งานเต็มเวลา"
+                    ],
+                    "workArrangements": {
+                        "data": [
+                            {
+                                "id": "2",
+                                "label": {
+                                    "text": "ไฮบริด"
+                                }
+                            }
+                        ],
+                        "displayText": "ไฮบริด"
+                    }
+                }
+            ]
+        },
+        "sabFilterOn": false,
+        "sabFilterPreservedForTabSwitch": false,
+        "shouldIncludeQueryHints": false,
+        "showSabFilter": false,
+        "solReferenceKeys": [],
+        "sortMode": [
+            {
+                "isActive": true,
+                "name": "ความเกี่ยวข้อง",
+                "value": "KeywordRelevance"
+            },
+            {
+                "isActive": false,
+                "name": "วันที่",
+                "value": "ListedDate"
+            }
+        ],
+        "source": "JobSearch-sm",
+        "title": "",
+        "titleTagShortLocationName": "กรุงเทพมหานคร",
+        "titleTagTestTitle": "",
+        "totalCount": 54,
+        "totalCountNewToYou": 27,
+        "totalPages": 0,
+        "gptTargeting": [
+            {
+                "key": "locale",
+                "value": "th-TH"
+            },
+            {
+                "key": "kw",
+                "value": "golang"
+            },
+            {
+                "key": "sta",
+                "value": "กรุงเทพมหานคร"
+            },
+            {
+                "key": "loc",
+                "value": ""
+            },
+            {
+                "key": "area",
+                "value": ""
+            },
+            {
+                "key": "suburb",
+                "value": "กรุงเทพมหานคร"
+            }
+        ],
+        "isRadialFilterNudgeShown": false,
+        "isRadialFilterShown": false,
+        "isRadialFilterShownByIsGranular": false,
+        "location": {
+            "description": "กรุงเทพมหานคร",
+            "locationDescription": "",
+            "type": "State",
+            "whereId": "1000002",
+            "localisedDescriptions": {
+                "en": {
+                    "contextualName": "Bangkok"
+                },
+                "th": {
+                    "contextualName": "กรุงเทพมหานคร"
+                }
+            },
+            "isGranular": false,
+            "defaultDistanceKms": 50
+        },
+        "newSince": 1772189960,
+        "solMetadata": {
+            "requestToken": "92403577-d529-46b6-bd13-4bb8cca0493d",
+            "token": "0~92403577-d529-46b6-bd13-4bb8cca0493d",
+            "keywords": "golang",
+            "sortMode": "RELEVANCE",
+            "locations": [
+                "กรุงเทพมหานคร",
+                "seek-1000002"
+            ],
+            "locationDistance": 50,
+            "pageSize": 32,
+            "pageNumber": 1,
+            "totalJobCount": 54,
+            "tags": {
+                "mordor:searchMarket": "UNIFIED_TH",
+                "mordor:result_count_rst": "47",
+                "mordor:result_count_vec": "0",
+                "mordor:rt": "31",
+                "mordor:count_vec": "0",
+                "mordor__flights": "mordor_808",
+                "mordor:count_rst": "47",
+                "mordor:count_ir": "7",
+                "mordor:result_count_ir": "7",
+                "mordor_prs": "0"
+            },
+            "query": {
+                "keywords": "golang",
+                "where": "กรุงเทพมหานคร"
+            }
+        },
+        "solMetadataString": "{\"requestToken\":\"92403577-d529-46b6-bd13-4bb8cca0493d\",\"token\":\"0~92403577-d529-46b6-bd13-4bb8cca0493d\",\"keywords\":\"golang\",\"sortMode\":\"RELEVANCE\",\"locations\":[\"กรุงเทพมหานคร\",\"seek-1000002\"],\"locationDistance\":50,\"pageSize\":32,\"pageNumber\":1,\"totalJobCount\":54,\"tags\":{\"mordor:searchMarket\":\"UNIFIED_TH\",\"mordor:result_count_rst\":\"47\",\"mordor:result_count_vec\":\"0\",\"mordor:rt\":\"31\",\"mordor:count_vec\":\"0\",\"mordor__flights\":\"mordor_808\",\"mordor:count_rst\":\"47\",\"mordor:count_ir\":\"7\",\"mordor:result_count_ir\":\"7\",\"mordor_prs\":\"0\"},\"query\":{\"keywords\":\"golang\",\"where\":\"กรุงเทพมหานคร\"}}",
+        "uniqueSearchToken": "03296bf5-6f68-40fc-8ec9-6210ea42287b",
+        "userQueryId": "24738c10544c1bad36c65123e9ca9d64-9960686"
+    },
+    "saveSearch": {
+        "emailAddress": "",
+        "errorMessage": "",
+        "saveable": true,
+        "status": "UNSAVED"
+    },
+    "search": {
+        "baseKeywords": "",
+        "keywordsField": "golang",
+        "whereField": "กรุงเทพมหานคร",
+        "filtersExpanded": true,
+        "query": {
+            "keywords": "golang",
+            "where": "กรุงเทพมหานคร"
+        },
+        "lastQuery": {},
+        "hasLoadedCounts": false,
+        "refinements": {
+            "sortmode": [
+                {
+                    "label": "Relevance",
+                    "value": "KeywordRelevance",
+                    "isActive": true
+                },
+                {
+                    "label": "Date",
+                    "value": "ListedDate",
+                    "isActive": false,
+                    "refineParams": {
+                        "keywords": "golang",
+                        "where": "กรุงเทพมหานคร",
+                        "sortmode": "ListedDate"
+                    }
+                }
+            ],
+            "clear": {}
+        },
+        "poeaCountryPicker": false,
+        "poeaCountryPickerFromNavigation": false,
+        "dynamicSearchBarType": "expanded",
+        "dynamicSearchBarConfiguration": "CLASSIC"
+    },
+    "seo": {
+        "canonicalUrl": "\u002Fgolang-jobs\u002Fin-%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3",
+        "partners": {
+            "canCrossLink": false
+        },
+        "alternateLinks": {
+            "en": "\u002Fgolang-jobs\u002Fin-Bangkok",
+            "th": "\u002Fgolang-jobs\u002Fin-%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3"
+        }
+    },
+    "user": {
+        "authenticated": true,
+        "userClientId": "561a0502-ce7c-4964-90ef-58ee7d0a1287",
+        "sessionId": "561a0502-ce7c-4964-90ef-58ee7d0a1287",
+        "testHeaders": {},
+        "timezone": "Asia\u002FBangkok",
+        "userAgent": "Mozilla\u002F5.0 (Linux; Android 6.0; Nexus 5 Build\u002FMRA58N) AppleWebKit\u002F537.36 (KHTML, like Gecko) Chrome\u002F145.0.0.0 Mobile Safari\u002F537.36",
+        "referrer": "",
+        "solId": "d7e65fd1-324d-4931-8d4d-c8849ab6bd9c",
+        "hasInitialSolIdCookie": true,
+        "hasInitialLastKnownSolUserIdCookie": true,
+        "seekerId": 580318583,
+        "serverAuthenticated": true,
+        "authenticationMethod": "ssa"
+    },
+    "@@redux-hotjar-state": []
+}

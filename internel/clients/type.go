@@ -1,4 +1,4 @@
-package scrapers
+package clients
 
 import (
 	"slices"

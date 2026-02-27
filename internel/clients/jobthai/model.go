@@ -1,28 +1,8 @@
-package scrapers
+package jobthai
 
-import (
-	"time"
-)
+import "time"
 
-type RawData struct {
-	hash         string
-	linkRef      string
-	jobTitle     string
-	company      string
-	imageCompany string
-	companyInfo  string
-	role         string
-	subtype      JobType
-	workLocation string
-	position     int
-	salary       string
-	updatedAt    time.Time
-	tags         Tags
-	contact      map[Contact]string
-	urgent       bool
-}
-
-type Jobthai_jobResponse struct {
+type JobResponse struct {
 	Data struct {
 		SearchJobs struct {
 			Data struct {
@@ -63,7 +43,7 @@ type Jobthai_jobResponse struct {
 	} `json:"data"`
 }
 
-type Jobthai_jobDetailResponse struct {
+type JobDetailResponse struct {
 	Data struct {
 		GetJobRawData struct {
 			Data struct {
