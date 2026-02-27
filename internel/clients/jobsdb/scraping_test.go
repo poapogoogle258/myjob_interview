@@ -9,5 +9,8 @@ import (
 
 func TestFetchJob(t *testing.T) {
 	data, _ := jobsdb.FetchJob(1)
-	fmt.Println(data)
+
+	for i, job := range data.Results.Results.Jobs {
+		fmt.Println(i+1, ") ", job.Title)
+	}
 }
