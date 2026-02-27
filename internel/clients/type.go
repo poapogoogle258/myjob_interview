@@ -13,13 +13,13 @@ var (
 	Hybrid JobType = "Hybrid"
 )
 
-type Contact string
+type Contact uint8
 
 var (
-	Email    Contact = "email"
-	Phone    Contact = "phone"
-	Name     Contact = "name"
-	Location Contact = "location"
+	Email    Contact = 0
+	Phone    Contact = 1
+	Name     Contact = 2
+	Location Contact = 3
 )
 
 type Tags map[string]struct{}

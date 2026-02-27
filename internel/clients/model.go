@@ -5,19 +5,17 @@ import (
 )
 
 type RawData struct {
-	hash         string
-	linkRef      string
-	jobTitle     string
-	company      string
-	imageCompany string
-	companyInfo  string
-	role         string
-	subtype      JobType
-	workLocation string
-	position     int
-	salary       string
-	updatedAt    time.Time
-	tags         Tags
-	contact      map[Contact]string
-	urgent       bool
+	Id             string
+	LinkRef        string
+	JobTitle       string
+	JobDescription string
+	Company        string
+	CompanyInfo    string
+	Subtype        JobType
+	WorkLocation   string
+	Salary         string
+	UpdatedAt      time.Time
+	Tags           Tags
+	Contact        map[Contact]string
+	Urgent         bool
 }

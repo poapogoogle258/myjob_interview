@@ -8,11 +8,19 @@ import (
 )
 
 func TestFetchJob(t *testing.T) {
-	data, _ := jobsdb.FetchJob(1)
-
-	for i, job := range data.Results.Results.Jobs {
-		fmt.Println(i+1, ") ", job.Title)
+	i, page := 1, 1
+FetchData:
+	data, _ := jobsdb.FetchJob(page)
+	for _, job := range data.Results.Results.Jobs {
+		fmt.Println(i, ") ", job.Title)
+		i++
 	}
+
+	if len(data.Results.Results.Jobs) != 0 {
+		page++
+		goto FetchData
+	}
+
 }
 
 func TestFetchJobDetail(t *testing.T) {

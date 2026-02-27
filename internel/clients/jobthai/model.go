@@ -50,52 +50,14 @@ type JobDetailResponse struct {
 				ID      int    `json:"_id"`
 				Title   string `json:"title"`
 				Company struct {
-					ID           int    `json:"_id"`
-					Name         string `json:"name"`
-					Logo         string `json:"logo"`
-					Website      string `json:"website"`
-					BusinessType struct {
-						ID   int    `json:"id"`
-						Name string `json:"name"`
-					} `json:"businessType"`
+					ID             int      `json:"_id"`
+					Name           string   `json:"name"`
+					Logo           string   `json:"logo"`
+					Website        string   `json:"website"`
 					Pictures       []string `json:"pictures"`
 					Detail         string   `json:"detail"`
 					Benefit        string   `json:"benefit"`
 					SpecialContent string   `json:"specialContent"`
-					Contact        struct {
-						Name     string   `json:"name"`
-						Tel      string   `json:"tel"`
-						Fax      string   `json:"fax"`
-						LineID   string   `json:"lineID"`
-						Email    []string `json:"email"`
-						Emails   []string `json:"emails"`
-						Location struct {
-							Address   string `json:"address"`
-							Map       string `json:"map"`
-							Direction string `json:"direction"`
-							Latitude  int    `json:"latitude"`
-							Longitude int    `json:"longitude"`
-							Province  struct {
-								ID   string `json:"id"`
-								Name string `json:"name"`
-							} `json:"province"`
-							District struct {
-								ID   string `json:"id"`
-								Name string `json:"name"`
-							} `json:"district"`
-							Subdistrict struct {
-								ID   string `json:"id"`
-								Name string `json:"name"`
-							} `json:"subdistrict"`
-							Country struct {
-								ID   string `json:"id"`
-								Name string `json:"name"`
-							} `json:"country"`
-							IndustrialName string `json:"industrialName"`
-							Zipcode        string `json:"zipcode"`
-						} `json:"location"`
-					} `json:"contact"`
-					BugeyesContent string `json:"bugeyesContent"`
 				} `json:"company"`
 				Properties   []string `json:"properties"`
 				Benefit      string   `json:"benefit"`
@@ -115,12 +77,10 @@ type JobDetailResponse struct {
 					Subdistrict struct {
 						Name string `json:"name"`
 					} `json:"subdistrict"`
-					Industrial     string   `json:"industrial"`
-					IndustrialName string   `json:"industrialName"`
-					Latitude       *float64 `json:"latitude"`
-					Longitude      *float64 `json:"longitude"`
-					Map            string   `json:"map"`
-					Direction      string   `json:"direction"`
+					Industrial     string `json:"industrial"`
+					IndustrialName string `json:"industrialName"`
+					Map            string `json:"map"`
+					Direction      string `json:"direction"`
 				} `json:"workLocation"`
 				NumberOfPosition string `json:"numberOfPosition"`
 				Contact          struct {
@@ -159,7 +119,6 @@ type JobDetailResponse struct {
 					Name string `json:"name"`
 				} `json:"urgent"`
 				TransitStations []string `json:"transitStations"`
-				BusRoutes       string   `json:"busRoutes"`
 				JobType         struct {
 					ID   int    `json:"id"`
 					Name string `json:"name"`
@@ -168,21 +127,11 @@ type JobDetailResponse struct {
 					ID   int    `json:"id"`
 					Name string `json:"name"`
 				} `json:"subjobType"`
-				BusinessType struct {
-					ID   int    `json:"id"`
-					Name string `json:"name"`
-				} `json:"businessType"`
-				UpdatedAt          time.Time `json:"updatedAt"`
-				Website            string    `json:"website"`
-				ApplyExternalLink  string    `json:"applyExternalLink"`
-				Tags               []string  `json:"tags"`
-				DisableApplyMethod struct {
-					ApplyNow   bool `json:"applyNow"`
-					TrustMail  bool `json:"trustMail"`
-					EasyForm   bool `json:"easyForm"`
-					UploadFile bool `json:"uploadFile"`
-				} `json:"disableApplyMethod"`
-				EmploymentType string `json:"employmentType"`
+				UpdatedAt         time.Time `json:"updatedAt"`
+				Website           string    `json:"website"`
+				ApplyExternalLink string    `json:"applyExternalLink"`
+				Tags              []string  `json:"tags"`
+				EmploymentType    string    `json:"employmentType"`
 			} `json:"data"`
 		} `json:"getJobRawData"`
 	} `json:"data"`
