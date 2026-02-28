@@ -8,6 +8,7 @@ import (
 	"github.com/joho/godotenv"
 	"github.com/poapogoogle258/myjob_interview/internel/db"
 	"github.com/poapogoogle258/myjob_interview/internel/handler"
+	"github.com/robfig/cron/v3"
 )
 
 func NewRouter(h *handler.JobHandler) *gin.Engine {
@@ -30,10 +31,16 @@ func main() {
 		log.Fatalf("Failed to connect to MongoDB: %v", err)
 	}
 
-	server := initializeServer(db)
+	app := initializeServer(db)
+
+	c := cron.New()
+	c.AddFunc("@every 30m", app.Scraper.ScrapingJob)
+	c.Start()
+	defer c.Stop()
+
 	address := os.Getenv("APP_HOST") + ":" + os.Getenv("APP_PORT")
 
-	if err := server.Run(address); err != nil {
+	if err := app.Router.Run(address); err != nil {
 		log.Fatalf("Failed to start server: %v", err)
 	}
 }

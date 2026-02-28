@@ -10,14 +10,27 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/poapogoogle258/myjob_interview/internel/handler"
 	"github.com/poapogoogle258/myjob_interview/internel/repository"
+	"github.com/poapogoogle258/myjob_interview/internel/usecase"
 	"go.mongodb.org/mongo-driver/mongo"
 )
 
 // Injectors from wire.go:
 
-func initializeServer(db *mongo.Database) *gin.Engine {
+func initializeServer(db *mongo.Database) *App {
 	jobRepository := repository.NewJobRepository(db)
 	jobHandler := handler.NewJobHandler(jobRepository)
 	engine := NewRouter(jobHandler)
-	return engine
+	scraperUsecase := usecase.NewScraperUsecase(jobRepository)
+	app := &App{
+		Router:  engine,
+		Scraper: scraperUsecase,
+	}
+	return app
+}
+
+// wire.go:
+
+type App struct {
+	Router  *gin.Engine
+	Scraper *usecase.ScraperUsecase
 }
