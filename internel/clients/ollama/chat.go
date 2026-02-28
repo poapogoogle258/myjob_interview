@@ -13,11 +13,28 @@ type jobDescriptor interface {
 	GetJobDescription() string
 }
 
-func GetSkillsRequestFromContent(jd jobDescriptor) ([]string, error) {
+type Result struct {
+	Language  []string `json:"languages"`
+	Framework []string `json:"frameworks"`
+	Tool      []string `json:"tools"`
+	Database  []string `json:"databases"`
+	HardSkill []string `json:"hardSkills"`
+	SoftSkill []string `json:"SoftSkills"`
+}
+
+func GetSkillsRequestFromContent(jd jobDescriptor) (*Result, error) {
 
 	ctx := context.Background()
 	prompt := fmt.Sprintf(`
-	Summarize the required skills from this job description, listing them item by item using the format { skills : [ skill1, skill2, skill3, ...]} 
+	Summarize the required skills from this job description, listing them item by item order by priority using the json format 
+	{ 
+		languages  : [ language1, language2, ...],
+		frameworks : [ framework1, framework2, ... ],
+		tools      : [ tool1, tool2, ... ],
+		databases  : [ database1, database2, ... ],
+		hardSkills : [ skill1, skill2, ... ],
+		softSkills : [ skill1, skill2, ... ]
+	} 
 	If it has an abbreviation like "mainSkill (subSkill1, subSkill2)," separate it only subSkill into a new skill .
 	job description : 
 	%s
@@ -47,15 +64,11 @@ func GetSkillsRequestFromContent(jd jobDescriptor) ([]string, error) {
 		return nil, err
 	}
 
-	data := &struct {
-		Skill []string `json:"skills"`
-	}{}
-
-	if err := json.Unmarshal([]byte(responseBuilder.String()), data); err != nil {
+	res := &Result{}
+	if err := json.Unmarshal([]byte(responseBuilder.String()), res); err != nil {
 		return nil, err
-
 	}
 
-	return data.Skill, nil
+	return res, nil
 
 }

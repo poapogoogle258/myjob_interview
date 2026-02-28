@@ -32,8 +32,6 @@ func TestGetSkillsRequestFromContent(t *testing.T) {
 
 		Architectural Vision: ออกแบบระบบให้รองรับการเติบโตและแก้ปัญหาที่ซับซ้อนด้วย Best Practices
 
-
-
 		🛠️ คุณสมบัติที่เรามองหา:
 
 		✅ Python/Django Specialist: เข้าใจลึกถึงขั้นปรับแต่ง ORM และ Performance ได้
@@ -73,6 +71,6 @@ func TestGetSkillsRequestFromContent(t *testing.T) {
 		t.Errorf(`%s`, err)
 	}
 
-	fmt.Println(result)
+	fmt.Printf("%+v\n", result)
 
 }

@@ -1,6 +1,8 @@
 package jobthai
 
-import "time"
+import (
+	"time"
+)
 
 type JobResponse struct {
 	Data struct {
