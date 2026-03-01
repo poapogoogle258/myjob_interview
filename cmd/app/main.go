@@ -21,7 +21,6 @@ func NewRouter(h *handler.JobHandler) *gin.Engine {
 }
 
 func main() {
-
 	if err := godotenv.Load(); err != nil { // default load is .env
 		panic(err)
 	}
@@ -37,6 +36,9 @@ func main() {
 	c.AddFunc("@every 30m", app.Scraper.ScrapingJob)
 	c.Start()
 	defer c.Stop()
+
+	// run app.Scraper.ScrapingJob
+	app.Scraper.ScrapingJob()
 
 	address := os.Getenv("APP_HOST") + ":" + os.Getenv("APP_PORT")
 

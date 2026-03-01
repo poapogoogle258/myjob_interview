@@ -24,12 +24,26 @@ FetchData:
 }
 
 func TestFetchJobDetail(t *testing.T) {
-	data, err := jobsdb.FetchJobDetail("90538471")
+	data, err := jobsdb.FetchJobDetail("90623433")
 	if err != nil {
 		t.Errorf("FetchJobDetail() failed: %v", err)
 		return
 	}
 
 	fmt.Println(data.Jobdetails)
+
+}
+
+func TestClient_FetchJobs(t *testing.T) {
+	var c jobsdb.Client
+	result, err := c.FetchJobs()
+	if err != nil {
+		t.Errorf("FetchJobs() failed: %v", err)
+		return
+	}
+
+	for job := range result {
+		fmt.Println(job)
+	}
 
 }

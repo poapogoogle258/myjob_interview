@@ -9,20 +9,7 @@ import (
 	"github.com/ollama/ollama/api"
 )
 
-type jobDescriptor interface {
-	GetJobDescription() string
-}
-
-type Result struct {
-	Language  []string `json:"languages"`
-	Framework []string `json:"frameworks"`
-	Tool      []string `json:"tools"`
-	Database  []string `json:"databases"`
-	HardSkill []string `json:"hardSkills"`
-	SoftSkill []string `json:"SoftSkills"`
-}
-
-func GetSkillsRequestFromContent(jd jobDescriptor) (*Result, error) {
+func GetSkillsRequestFromContent(jd string) (string, error) {
 
 	ctx := context.Background()
 	prompt := fmt.Sprintf(`
@@ -38,11 +25,11 @@ func GetSkillsRequestFromContent(jd jobDescriptor) (*Result, error) {
 	If it has an abbreviation like "mainSkill (subSkill1, subSkill2)," separate it only subSkill into a new skill .
 	job description : 
 	%s
-	`, jd.GetJobDescription())
+	`, jd)
 
 	client, err := api.ClientFromEnvironment()
 	if err != nil {
-		return nil, err
+		return "", err
 	}
 
 	steam := false
@@ -61,14 +48,9 @@ func GetSkillsRequestFromContent(jd jobDescriptor) (*Result, error) {
 
 	// Use the Chat function to get a response
 	if err := client.Generate(ctx, req, respFunc); err != nil {
-		return nil, err
+		return "", err
 	}
 
-	res := &Result{}
-	if err := json.Unmarshal([]byte(responseBuilder.String()), res); err != nil {
-		return nil, err
-	}
-
-	return res, nil
+	return responseBuilder.String(), nil
 
 }

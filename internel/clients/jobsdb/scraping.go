@@ -6,7 +6,62 @@ import (
 	"io"
 	"net/http"
 	"strings"
+
+	"github.com/poapogoogle258/myjob_interview/internel/model"
+	provider "github.com/poapogoogle258/myjob_interview/internel/provider/clients_provider"
 )
+
+type Client struct{}
+
+func (c *Client) GetName() string {
+	return "jobsdb"
+}
+
+func (c *Client) FetchJobs() ([]*model.JobModel, error) {
+	results := make([]*model.JobModel, 0, 100)
+	page := 1
+	for {
+		jobs, err := FetchJob(page)
+		if err != nil {
+			return nil, err
+		}
+		for _, job := range jobs.Results.Results.Jobs {
+			res, err := FetchJobDetail(job.ID)
+			if err != nil {
+				return nil, err
+			}
+			// convert response to Job DAO
+			detail := res.Jobdetails.Result.Job
+			salary := "ไม่ได้ระบุ"
+			if detail.Salary != nil && detail.Salary.Label != "" {
+				salary = detail.Salary.Label
+			}
+			results = append(results, &model.JobModel{
+				Source:      c.GetName(),
+				ExternalID:  fmt.Sprintf("%s", job.ID),
+				Title:       detail.Title,
+				CompanyName: detail.Advertiser.Name,
+				Location:    detail.Location.Label,
+				Salary:      salary,
+				Description: fmt.Sprintf("abstract :\n%s\n description :\n %s", detail.Abstract, detail.Content),
+				Status:      "new",
+				Skills:      nil,
+				URL:         fmt.Sprintf("https://th.jobsdb.com/th/job/%s", job.ID),
+				PostedAt:    detail.ListedAt.DateTimeUtc,
+			})
+		}
+		if len(results) == jobs.Results.TotalCount {
+			break
+		}
+		page++
+	}
+
+	return results, nil
+}
+
+func init() {
+	provider.Register(&Client{})
+}
 
 func FetchJob(page int) (*JobResponse, error) {
 	//https://th.jobsdb.com/th/golang-jobs/in-กรุงเทพมหานคร?page=1

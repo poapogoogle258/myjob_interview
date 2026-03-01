@@ -60,9 +60,16 @@ type JobDetailResponse struct {
 				ExpiresAt   struct {
 					DateTimeUtc time.Time `json:"dateTimeUtc"`
 				} `json:"expiresAt"`
-				Abstract  string `json:"abstract"`
-				Content   string `json:"content"`
-				Salary    string `json:"salary"`
+
+				Abstract string `json:"abstract"`
+				Content  string `json:"content"`
+				Salary   *struct {
+					Label string `json:"label"`
+				} `json:"salary"`
+				ListedAt struct {
+					Label       string    `json:"label"`
+					DateTimeUtc time.Time `json:"dateTimeUtc"`
+				} `json:"listedAt"`
 				WorkTypes struct {
 					Label string `json:"label"`
 				} `json:"workTypes"`

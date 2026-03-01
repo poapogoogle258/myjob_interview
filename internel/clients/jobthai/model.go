@@ -79,10 +79,6 @@ type JobDetailResponse struct {
 					Subdistrict struct {
 						Name string `json:"name"`
 					} `json:"subdistrict"`
-					Industrial     string `json:"industrial"`
-					IndustrialName string `json:"industrialName"`
-					Map            string `json:"map"`
-					Direction      string `json:"direction"`
 				} `json:"workLocation"`
 				NumberOfPosition string `json:"numberOfPosition"`
 				Contact          struct {
@@ -120,8 +116,7 @@ type JobDetailResponse struct {
 					ID   int    `json:"id"`
 					Name string `json:"name"`
 				} `json:"urgent"`
-				TransitStations []string `json:"transitStations"`
-				JobType         struct {
+				JobType struct {
 					ID   int    `json:"id"`
 					Name string `json:"name"`
 				} `json:"jobType"`

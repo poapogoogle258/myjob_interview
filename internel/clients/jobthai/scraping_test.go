@@ -19,7 +19,6 @@ func TestFetchJobs(t *testing.T) {
 		// TODO: Add test cases.
 		{
 			name:    "test fetch golang page 1",
-			keyword: "golang",
 			page:    1,
 			want:    nil,
 			wantErr: false,
@@ -30,7 +29,7 @@ func TestFetchJobs(t *testing.T) {
 			i := 1
 
 		FetchJob:
-			result, gotErr := jobthai.FetchJobs(tt.keyword, tt.page)
+			result, gotErr := jobthai.FetchJobs(tt.page)
 			if gotErr != nil {
 				if !tt.wantErr {
 					t.Errorf("FetchJobs() failed: %v", gotErr)
@@ -72,7 +71,7 @@ func TestFetchJobsDetail(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			detail, gotErr := jobthai.FetchJobsDetail(tt.id)
+			_, gotErr := jobthai.FetchJobsDetail(tt.id)
 			if gotErr != nil {
 				if !tt.wantErr {
 					t.Errorf("FetchJobsDetail() failed: %v", gotErr)
@@ -80,11 +79,26 @@ func TestFetchJobsDetail(t *testing.T) {
 				return
 			}
 
-			fmt.Println(detail.Data.GetJobRawData.Data.Description)
+			// fmt.Println(detail.Data.GetJobRawData.Data.Description)
 			// for _, propertie := range detail.Data.GetJobRawData.Data.Properties {
 			// 	fmt.Printf(propertie)
 			// }
 
 		})
 	}
+}
+
+func TestClient_FetchJobs(t *testing.T) {
+
+	var c jobthai.Client
+	data, gotErr := c.FetchJobs()
+	if gotErr != nil {
+		t.Errorf("FetchJobs() failed: %v", gotErr)
+		return
+	}
+
+	for _, job := range data {
+		fmt.Printf("%+v\n", job)
+	}
+
 }

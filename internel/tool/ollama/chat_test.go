@@ -4,17 +4,11 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/poapogoogle258/myjob_interview/internel/clients/ollama"
+	"github.com/poapogoogle258/myjob_interview/internel/tool/ollama"
 )
 
-type Job string
-
-func (j Job) GetJobDescription() string {
-	return string(j)
-}
 func TestGetSkillsRequestFromContent(t *testing.T) {
-
-	job := Job(fmt.Sprintf(`
+	jobContent := `
 		title : Senior Backend Developer
 		company : Collective Wisdom Co., Ltd. 
 
@@ -64,9 +58,9 @@ func TestGetSkillsRequestFromContent(t *testing.T) {
 
 		ส่ง Resume และ Profile เทพๆ ของคุณมาได้เลยที่: 📧 Email: hr@uppass.io 📝 โดยระบุหัวข้ออีเมล: "สมัครตำแหน่ง Senior Backend Developer - UpPass"
 
-		มาสร้างสิ่งที่ยิ่งใหญ่ไปด้วยกันที่ UpPass นะคะ!`))
+		มาสร้างสิ่งที่ยิ่งใหญ่ไปด้วยกันที่ UpPass นะคะ!`
 
-	result, err := ollama.GetSkillsRequestFromContent(job)
+	result, err := ollama.GetSkillsRequestFromContent(jobContent)
 	if err != nil {
 		t.Errorf(`%s`, err)
 	}
