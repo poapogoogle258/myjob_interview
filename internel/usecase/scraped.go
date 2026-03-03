@@ -50,6 +50,9 @@ func (u *ScraperUsecase) ScrapingJob() {
 		for i, job := range jobs {
 			jobId := model.GetHashJobId(job)
 			if result, _ := u.repo.GetByHashId(ctx, jobId); result != nil {
+				job.HashId = jobId
+				job.Skills = result.Skills
+				u.repo.UpsertByExternalID(ctx, job)
 				continue
 			}
 			ctx_10s, cancel_10s := context.WithTimeout(ctx, 30*time.Second)
