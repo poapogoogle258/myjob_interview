@@ -11,6 +11,7 @@ import (
 	"github.com/poapogoogle258/myjob_interview/internel/handler"
 	"github.com/poapogoogle258/myjob_interview/internel/repository"
 	"github.com/poapogoogle258/myjob_interview/internel/usecase"
+	"github.com/poapogoogle258/myjob_interview/internel/utils/logger"
 )
 
 type App struct {
@@ -20,6 +21,7 @@ type App struct {
 
 func initializeServer(db *mongo.Database) *App {
 	wire.Build(
+		logger.NewLogger,
 		repository.NewJobRepository,
 		handler.NewJobHandler,
 		usecase.NewScraperUsecase,
@@ -28,3 +30,5 @@ func initializeServer(db *mongo.Database) *App {
 	)
 	return nil
 }
+
+// go run github.com/google/wire/cmd/wire .

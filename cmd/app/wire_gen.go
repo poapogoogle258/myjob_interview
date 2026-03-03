@@ -11,6 +11,7 @@ import (
 	"github.com/poapogoogle258/myjob_interview/internel/handler"
 	"github.com/poapogoogle258/myjob_interview/internel/repository"
 	"github.com/poapogoogle258/myjob_interview/internel/usecase"
+	"github.com/poapogoogle258/myjob_interview/internel/utils/logger"
 	"go.mongodb.org/mongo-driver/mongo"
 )
 
@@ -20,7 +21,8 @@ func initializeServer(db *mongo.Database) *App {
 	jobRepository := repository.NewJobRepository(db)
 	jobHandler := handler.NewJobHandler(jobRepository)
 	engine := NewRouter(jobHandler)
-	scraperUsecase := usecase.NewScraperUsecase(jobRepository)
+	slogLogger := logger.NewLogger()
+	scraperUsecase := usecase.NewScraperUsecase(jobRepository, slogLogger)
 	app := &App{
 		Router:  engine,
 		Scraper: scraperUsecase,

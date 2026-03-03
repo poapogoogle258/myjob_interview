@@ -2,7 +2,6 @@ package db
 
 import (
 	"context"
-	"fmt"
 	"os"
 	"time"
 
@@ -15,7 +14,6 @@ func ConnectMongoDB() (*mongo.Database, error) {
 	uri := os.Getenv("DB_URI")
 	dbName := os.Getenv("DB_NAME")
 
-	fmt.Println(uri)
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 

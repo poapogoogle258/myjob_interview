@@ -17,6 +17,7 @@ type JobRepository interface {
 	GetByExternalID(ctx context.Context, source, externalID string) (*model.JobModel, error)
 	GetPaginated(ctx context.Context, orderby string, page, limit int64) ([]*model.JobModel, error)
 	GetAll(ctx context.Context) ([]*model.JobModel, error)
+	GetByHashId(ctx context.Context, hashId string) (*model.JobModel, error)
 }
 
 type jobRepository struct {
@@ -65,6 +66,22 @@ func (r *jobRepository) UpsertByExternalID(ctx context.Context, job *model.JobMo
 	opts := options.Update().SetUpsert(true)
 	_, err := r.collection.UpdateOne(ctx, filter, update, opts)
 	return err
+}
+
+func (r *jobRepository) GetByHashId(ctx context.Context, hashId string) (*model.JobModel, error) {
+	filter := bson.M{
+		"hash_id": hashId,
+	}
+
+	var job model.JobModel
+	err := r.collection.FindOne(ctx, filter).Decode(&job)
+	if err != nil {
+		if err == mongo.ErrNoDocuments {
+			return nil, nil
+		}
+		return nil, err
+	}
+	return &job, nil
 }
 
 // GetByExternalID retrieves a single job by its source and external ID.

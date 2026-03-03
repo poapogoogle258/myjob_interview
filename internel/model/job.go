@@ -1,6 +1,10 @@
 package model
 
 import (
+	"crypto/sha256"
+	"encoding/hex"
+	"fmt"
+	"strings"
 	"time"
 
 	"go.mongodb.org/mongo-driver/bson/primitive"
@@ -19,6 +23,7 @@ type JobModel struct {
 	Status      string             `bson:"status"`
 	Skills      *SkillsModel       `bson:"skills"`
 	URL         string             `bson:"url"`
+	HashId      string             `bson:"hash_id"`
 	PostedAt    time.Time          `bson:"posted_at"`
 	CreatedAt   time.Time          `bson:"created_at,omitempty"`
 	UpdatedAt   time.Time          `bson:"updated_at"`
@@ -31,4 +36,14 @@ type SkillsModel struct {
 	Databases  []string `bson:"databases"`
 	HardSkills []string `bson:"hard_skills"`
 	SoftSkills []string `bson:"soft_skills"`
+}
+
+func GetHashJobId(data *JobModel) string {
+	title := strings.ToLower(strings.ReplaceAll(data.Title, " ", ""))
+	company := strings.ToLower(strings.ReplaceAll(data.CompanyName, " ", ""))
+	key := fmt.Sprintf("%s;%s;%s", strings.ToLower(data.Source), title, company)
+
+	hashBytes := sha256.Sum256([]byte(key))
+
+	return hex.EncodeToString(hashBytes[:])
 }

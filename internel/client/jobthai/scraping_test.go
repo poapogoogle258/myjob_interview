@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/poapogoogle258/myjob_interview/internel/clients/jobthai"
+	"github.com/poapogoogle258/myjob_interview/internel/client/jobthai"
 )
 
 func TestFetchJobs(t *testing.T) {

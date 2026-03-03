@@ -128,8 +128,6 @@ func FetchJobsDetail(id int) (*JobDetailResponse, error) {
 
 	body, _ := io.ReadAll(resp.Body)
 
-	fmt.Println(string(body))
-
 	var jobData JobDetailResponse
 	if err := json.Unmarshal(body, &jobData); err != nil {
 		return nil, err
