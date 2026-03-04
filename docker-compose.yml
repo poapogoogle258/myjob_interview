@@ -1,6 +1,28 @@
 version: '3.3'
 
 services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8077:8077"
+    environment:
+      - GIN_MODE=release
+      - APP_HOST=0.0.0.0
+      - APP_PORT=8077
+      - MONGO_URI=mongodb://mongoadmin:mongoadmin@host.docker.internal:27017
+      - MONGO_DB_NAME=myjob_interview
+    depends_on:
+      - mongo
+  frontend:
+    build:
+      context: ./front
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
   mongo:
     image: mongo
     restart: always

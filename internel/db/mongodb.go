@@ -11,8 +11,8 @@ import (
 
 // ConnectMongoDB initializes a connection to MongoDB and returns the database instance.
 func ConnectMongoDB() (*mongo.Database, error) {
-	uri := os.Getenv("DB_URI")
-	dbName := os.Getenv("DB_NAME")
+	uri := os.Getenv("MONGO_URI")
+	dbName := os.Getenv("MONGO_DB_NAME")
 
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
