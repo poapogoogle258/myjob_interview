@@ -18,6 +18,7 @@ type JobRepository interface {
 	GetPaginated(ctx context.Context, orderby string, page, limit int64) ([]*model.JobModel, error)
 	GetAll(ctx context.Context) ([]*model.JobModel, error)
 	GetByHashId(ctx context.Context, hashId string) (*model.JobModel, error)
+	UpdateStatus(ctx context.Context, jobID string, status string) error
 }
 
 type jobRepository struct {
@@ -150,4 +151,17 @@ func (r *jobRepository) GetAll(ctx context.Context) ([]*model.JobModel, error) {
 		return nil, err
 	}
 	return jobs, nil
+}
+
+func (r *jobRepository) UpdateStatus(ctx context.Context, jobID string, status string) error {
+	filter := bson.M{"hash_id": jobID}
+	update := bson.M{
+		"$set": bson.M{
+			"status":     status,
+			"updated_at": time.Now(),
+		},
+	}
+
+	_, err := r.collection.UpdateOne(ctx, filter, update)
+	return err
 }

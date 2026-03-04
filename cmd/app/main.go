@@ -16,6 +16,7 @@ func NewRouter(h *handler.JobHandler) *gin.Engine {
 	v1 := r.Group("/api/v1")
 	{
 		v1.GET("/job", h.GetAllJobs)
+		v1.PUT("/job/:id/status", h.UpdateJobStatus)
 	}
 	return r
 }
@@ -36,9 +37,6 @@ func main() {
 	c.AddFunc("@every 30m", app.Scraper.ScrapingJob)
 	c.Start()
 	defer c.Stop()
-
-	// run app.Scraper.ScrapingJob
-	app.Scraper.ScrapingJob()
 
 	address := os.Getenv("APP_HOST") + ":" + os.Getenv("APP_PORT")
 

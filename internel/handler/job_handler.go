@@ -23,3 +23,24 @@ func (h *JobHandler) GetAllJobs(c *gin.Context) {
 	}
 	c.JSON(http.StatusOK, jobs)
 }
+
+func (h *JobHandler) UpdateJobStatus(c *gin.Context) {
+	jobID := c.Param("id")
+
+	var body struct {
+		Status string `json:"status" binding:"required"`
+	}
+
+	if err := c.ShouldBindJSON(&body); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+
+	err := h.repo.UpdateStatus(c.Request.Context(), jobID, body.Status)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{"message": "job status updated successfully"})
+}
