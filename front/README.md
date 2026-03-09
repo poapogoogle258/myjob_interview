@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Job Interview Dashboard
 
-## Getting Started
+โปรเจกต์นี้เป็นระบบ Dashboard สำหรับจัดการและติดตามสถานะการสมัครงาน (Job Application Tracking) ที่ช่วยให้ผู้ใช้งานสามารถบริหารจัดการรายการงานที่สนใจหรือสมัครไปแล้วได้อย่างมีประสิทธิภาพ
 
-First, run the development server:
+## 🎯 จุดประสงค์ของโปรเจกต์
+1. เพื่อรวบรวมข้อมูลงานจากแหล่งต่างๆ (เช่น JobsDB) มาไว้ในที่เดียว
+2. เพื่อติดตามสถานะการสมัครงานในแต่ละขั้นตอน (New, Viewed, Interview, Rejected, Offered)
+3. เพื่อวิเคราะห์ทักษะ (Skills) ที่จำเป็นในแต่ละตำแหน่งงานที่ระบบดึงข้อมูลมาได้
+4. เพื่ออำนวยความสะดวกในการอัปเดตสถานะและเข้าถึงลิงก์ประกาศรับสมัครงานต้นทาง
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🛠️ Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Frontend
+- **Framework:** [Next.js 14+](https://nextjs.org/) (App Router)
+- **Library:** [React](https://reactjs.org/) (Client Components)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Icons:** SVG Icons & Lucide-style animations
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Backend (API Connection)
+- เชื่อมต่อกับ REST API ที่ `http://localhost:8077/api/v1`
+- รองรับการทำงานร่วมกับระบบ Cron Job สำหรับการทำ Web Scraping
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 คุณสมบัติและการทำงานของระบบ
 
-## Learn More
+### 1. ระบบ Dashboard สรุปสถานะ
+- แสดงการนับจำนวนงานแยกตามสถานะต่างๆ ในรูปแบบการ์ดที่สวยงาม
+- สามารถคลิกที่การ์ดสถานะเพื่อกรอง (Filter) รายการงานในตารางได้ทันที
 
-To learn more about Next.js, take a look at the following resources:
+### 2. ระบบจัดการรายการงาน (Job Management)
+- แสดงรายละเอียดงานครบถ้วน: ชื่อตำแหน่ง, บริษัท, แหล่งที่มา (Source), วันที่โพสต์, สถานที่ทำงาน, และเงินเดือน
+- **Skill Analysis:** แสดง Tag ทักษะที่แยกประเภทตาม Languages, Frameworks และ Databases
+- **Status Update:** สามารถเปลี่ยนสถานะงานได้โดยตรงจาก Dropdown ในตาราง
+- **Auto-Viewed:** ระบบจะเปลี่ยนสถานะเป็น "Viewed" ให้โดยอัตโนมัติเมื่อผู้ใช้คลิกปุ่ม "View Job" เพื่อไปดูรายละเอียดที่เว็บต้นทาง
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. ระบบควบคุมการดึงข้อมูล (Scraping Control)
+- มีปุ่มสำหรับสั่งการให้ Server เริ่มดึงข้อมูลงานใหม่ (Active Scraping)
+- แสดงสถานะการทำงานของ Server (Processing status) แบบ Real-time
+- แสดงเวลาล่าสุดที่มีการดึงข้อมูลสำเร็จ
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 💻 การติดตั้งและเริ่มใช้งาน
 
-## Deploy on Vercel
+1. ติดตั้ง dependencies:
+   ```bash
+   npm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. รันโปรเจกต์ในโหมด Development:
+   ```bash
+   npm run dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. เปิด Browser ไปที่ http://localhost:3000
