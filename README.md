@@ -50,15 +50,9 @@
 - แสดงเวลาล่าสุดที่มีการดึงข้อมูลสำเร็จ
 
 ## 💻 การติดตั้งและเริ่มใช้งาน
+ 
+โหลด docker แล้วก็ run 
 
-1. ติดตั้ง dependencies:
-   ```bash
-   npm install
-   ```
-
-2. รันโปรเจกต์ในโหมด Development:
-   ```bash
-   npm run dev
-   ```
-
-3. เปิด Browser ไปที่ http://localhost:3000
+```bash
+docker compose up --build
+```
