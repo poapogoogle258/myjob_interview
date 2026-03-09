@@ -29,7 +29,7 @@ func TestFetchJobs(t *testing.T) {
 			i := 1
 
 		FetchJob:
-			result, gotErr := jobthai.FetchJobs(tt.page)
+			result, gotErr := jobthai.FetchJobs(tt.keyword, tt.page)
 			if gotErr != nil {
 				if !tt.wantErr {
 					t.Errorf("FetchJobs() failed: %v", gotErr)

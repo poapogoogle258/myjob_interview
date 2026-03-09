@@ -19,50 +19,65 @@ func (c *Client) GetName() string {
 }
 
 func (c *Client) FetchJobs() ([]*model.JobModel, error) {
-	results := make([]*model.JobModel, 0, 100)
-	page := 1
-	for {
-		jobs, err := FetchJobs(page)
-		if err != nil {
-			return nil, err
-		}
-		for _, job := range jobs.Data.SearchJobs.Data.Data {
-			res, err := FetchJobsDetail(job.ID)
+	results_nums := make([]*model.JobModel, 0)
+	map_results := make(map[string]struct{})
+	keywords := []string{"go", "golang"}
+
+	for _, keyword := range keywords {
+		results := make([]*model.JobModel, 0, 100)
+		page := 1
+		for {
+			jobs, err := FetchJobs(keyword, page)
 			if err != nil {
 				return nil, err
 			}
-			// convert response to Job DAO
-			detail := res.Data.GetJobRawData.Data
-			results = append(results, &model.JobModel{
-				Source:      c.GetName(),
-				ExternalID:  fmt.Sprintf("%d", job.ID),
-				Title:       detail.Title,
-				CompanyName: detail.Company.Name,
-				Location:    fmt.Sprintf("%s %s %s %s", detail.WorkLocation.Province.Name, detail.WorkLocation.District.Name, detail.WorkLocation.Subdistrict.Name, detail.WorkLocation.Address),
-				Salary:      detail.Salary,
-				Description: fmt.Sprintf("properties :\n%s\n description :\n %s", detail.Description, strings.Join(detail.Properties, "\n")),
-				Status:      "new",
-				Skills:      nil,
-				URL:         fmt.Sprintf("https://www.jobthai.com/th/job/%d", job.ID),
-				PostedAt:    detail.UpdatedAt,
-			})
+			if len(jobs.Data.SearchJobs.Data.Data) == 0 {
+				break
+			}
+			for _, job := range jobs.Data.SearchJobs.Data.Data {
+				res, err := FetchJobsDetail(job.ID)
+				if err != nil {
+					return nil, err
+				}
+				// convert response to Job DAO
+				detail := res.Data.GetJobRawData.Data
+
+				// check duplicate jobs fetched
+				if _, ok := map_results[fmt.Sprintf("%d", job.ID)]; ok {
+					continue
+				}
+
+				results = append(results, &model.JobModel{
+					Source:      c.GetName(),
+					ExternalID:  fmt.Sprintf("%d", job.ID),
+					Title:       detail.Title,
+					CompanyName: detail.Company.Name,
+					Location:    fmt.Sprintf("%s %s %s %s", detail.WorkLocation.Province.Name, detail.WorkLocation.District.Name, detail.WorkLocation.Subdistrict.Name, detail.WorkLocation.Address),
+					Salary:      detail.Salary,
+					Description: fmt.Sprintf("properties :\n%s\n description :\n %s", detail.Description, strings.Join(detail.Properties, "\n")),
+					Status:      "new",
+					Skills:      nil,
+					URL:         fmt.Sprintf("https://www.jobthai.com/th/job/%d", job.ID),
+					PostedAt:    detail.UpdatedAt,
+				})
+				map_results[fmt.Sprintf("%d", job.ID)] = struct{}{}
+			}
+			page++
 		}
-		if len(results) == jobs.Data.SearchJobs.Data.Total {
-			break
-		}
-		page++
+
+		results_nums = append(results_nums, results...)
 	}
 
-	return results, nil
+	return results_nums, nil
 }
 
 func init() {
 	provider.Register(&Client{})
 }
 
-func FetchJobs(page int) (*JobResponse, error) {
+func FetchJobs(keyword string, page int) (*JobResponse, error) {
 	sha256Hash := "8c21badbcb9da924a3ed99c6d2f16d34758a045523495b4458f2a970c70cd0b2"
-	variables := fmt.Sprintf(`{"searchJobsFilter":{"province":"01","keyword":"golang","l":"th","page":%d},"orderBy":"UPDATED_AT_DESC","staticDataVersion":{"jobType":null,"subjobType":null}}`, page)
+	variables := fmt.Sprintf(`{"searchJobsFilter":{"region":"6","jobtype":"7","keyword":"%s","l":"th","page":%d},"orderBy":"UPDATED_AT_DESC","staticDataVersion":{"jobType":null,"subjobType":null}}`, keyword, page)
 	extensions := fmt.Sprintf(`{"persistedQuery":{"version":1,"sha256Hash":"%s"}}`, sha256Hash)
 
 	u, _ := url.Parse("https://api.jobthai.com/v1/graphql")

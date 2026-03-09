@@ -1,13 +1,58 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
+
+function CMPCostedDate(a: any, b: any) {
+  if (a.PostedAt < b.PostedAt) return 1;
+  if (a.PostedAt > b.PostedAt) return -1;
+  if (a < b) return 1;
+  return 0;
+
+}
 
 export default function Home() {
   const [jobs, setJobs] = useState<any[]>([]);
+  const [cronScrapingJob, setCronScrapingJob] = useState<any>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [filterStatus, setFilterStatus] = useState<string>("null");
 
   const API_BASE_URL = "http://localhost:8077/api/v1";
+
+
+
+  const jobsFiltered = useMemo(() => {
+    if (filterStatus === "all") return jobs;
+    return jobs.filter((job) => job.Status.toLowerCase() === filterStatus);
+  }, [filterStatus])
+
+  const statusListChange = (s: string) => {
+    if (s === filterStatus) {
+      setFilterStatus("all")
+    } else {
+      setFilterStatus(s)
+    }
+  }
+  
+  const fetchCronJobsStatus = async() => {
+      const response = await fetch(`${API_BASE_URL}/cron/scraping/status`);
+      if (!response.ok) throw new Error("Failed to fetch jobs");
+      const data = await response.json();
+
+      // update coming
+      if(cronScrapingJob.processing === true && data.processing === false){
+        fetchJobs()
+      }
+      setCronScrapingJob(data);
+
+  }
+
+  const activeCronScrapingJob = async() => {
+      const response = await fetch(`${API_BASE_URL}/cron/scraping/active`);
+      if (!response.ok) throw new Error("Failed to fetch jobs");
+
+      setCronScrapingJob({...cronScrapingJob, processing: true});
+  }
 
   const fetchJobs = async () => {
     try {
@@ -60,7 +105,11 @@ export default function Home() {
   };
 
   useEffect(() => {
-    fetchJobs();
+    fetchJobs()
+    fetchCronJobsStatus();
+
+    const interval = setInterval(fetchCronJobsStatus, 10000); // 10 sec
+    return () => clearInterval(interval);
   }, []);
 
   if (loading) return <div className="flex min-h-screen items-center justify-center font-sans">Loading jobs...</div>;
@@ -79,25 +128,44 @@ export default function Home() {
       <div className="mx-auto">
         <header className="flex justify-between items-center mb-8">
           <h1 className="text-3xl font-bold text-gray-800">Job Interview Dashboard</h1>
-          <button 
-            onClick={fetchJobs}
-            className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors shadow-sm"
-          >
-            Refresh Data
-          </button>
+          <div className="flex gap-1">
+            <button
+              disabled={cronScrapingJob.processing === true || cronScrapingJob.processing === undefined}
+              onClick={() => activeCronScrapingJob()}
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors shadow-sm"
+            >
+              {cronScrapingJob.processing ? (
+                <span className="flex items-center gap-2">
+                  <svg className="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  server กำลังดึงข้อมูลใหม่...
+                </span>
+              ) : (
+                `ดึงข้อมูลล่าสุด ${cronScrapingJob.time === null ? "N/A" : new Date(cronScrapingJob.time).toLocaleTimeString("th-TH", { hour: 'numeric', minute: 'numeric', second: 'numeric' })}`
+              )}
+            </button>
+            {/* <button
+              onClick={fetchJobs}
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors shadow-sm"
+            >
+              Refresh Data
+            </button> */}
+          </div>
+
         </header>
 
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
           {statusList.map((s) => (
-            <div key={s} className="bg-white p-4 rounded-xl shadow-sm border border-gray-200 flex flex-col items-center transition-transform hover:scale-105">
+            <div key={s} onClick={() => statusListChange(s)} className={`${(s == filterStatus) ? 'bg-gray-100' : 'bg-white'} p-4 rounded-xl shadow-sm border border-gray-200 flex flex-col items-center transition-transform hover:scale-105`}>
               <span className="text-xs font-bold uppercase text-gray-500 mb-1">{s}</span>
-              <span className={`text-3xl font-extrabold ${
-                s === 'new' ? 'text-blue-600' :
+              <span className={`text-3xl font-extrabold ${s === 'new' ? 'text-blue-600' :
                 s === 'viewed' ? 'text-slate-600' :
-                s === 'interview' ? 'text-amber-600' :
-                s === 'rejected' ? 'text-red-600' :
-                'text-emerald-600'
-              }`}>
+                  s === 'interview' ? 'text-amber-600' :
+                    s === 'rejected' ? 'text-red-600' :
+                      'text-emerald-600'
+                }`}>
                 {statusCounts[s] || 0}
               </span>
             </div>
@@ -111,6 +179,7 @@ export default function Home() {
                 <tr>
                   <th className="px-6 py-4 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">Job & Company</th>
                   <th className="px-6 py-4 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">Source</th>
+                  <th className="px-6 py-4 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">Posted</th>
                   <th className="px-6 py-4 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">Location</th>
                   <th className="px-6 py-4 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">Skills</th>
                   <th className="px-6 py-4 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">Salary</th>
@@ -119,11 +188,13 @@ export default function Home() {
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
-                {jobs.map((job) => {
+                {((filterStatus === "null") ? jobs : jobsFiltered).sort(CMPCostedDate).map((job) => {
                   const id = job.hash_id || job.HashId;
                   const title = job.title || job.Title;
                   const company = job.company_name || job.CompanyName;
                   const source = job.source || job.Source;
+                  const row_posted = job.posted_at || job.PostedAt;
+                  const posted = new Date(row_posted)
                   const rawSalary = job.salary || job.Salary || "";
                   const salary = rawSalary.length > 30 ? rawSalary.substring(0, 30) + "..." : rawSalary
                   const status = job.status || job.Status;
@@ -134,7 +205,7 @@ export default function Home() {
                   const languages = skills?.languages || skills?.Languages || [];
                   const frameworks = skills?.frameworks || skills?.Frameworks || [];
                   const databases = skills?.databases || skills?.Databases || [];
-                  
+
                   const allSkills = [
                     ...languages.map((s: string) => ({ name: s, type: 'lang' })),
                     ...frameworks.map((s: string) => ({ name: s, type: 'fw' })),
@@ -148,11 +219,13 @@ export default function Home() {
                         <div className="text-sm text-gray-500">{company}</div>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
-                        <span className={`px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${
-                          source === 'jobsdb' ? 'bg-blue-100 text-blue-800' : 'bg-orange-100 text-orange-800'
-                        }`}>
+                        <span className={`px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${source === 'jobsdb' ? 'bg-blue-100 text-blue-800' : 'bg-orange-100 text-orange-800'
+                          }`}>
                           {source}
                         </span>
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                        {posted.toLocaleDateString("th-TH", {year: 'numeric',month: 'long',day: 'numeric',}) || "N/A"}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
                         {location || "N/A"}
@@ -160,11 +233,10 @@ export default function Home() {
                       <td className="px-6 py-4 text-sm text-gray-600">
                         <div className="flex flex-wrap gap-1 max-w-xs">
                           {allSkills.map((skill, idx) => (
-                            <span key={idx} className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase border ${
-                              skill.type === 'lang' ? 'bg-blue-50 text-blue-700 border-blue-100' :
+                            <span key={idx} className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase border ${skill.type === 'lang' ? 'bg-blue-50 text-blue-700 border-blue-100' :
                               skill.type === 'fw' ? 'bg-green-50 text-green-700 border-green-100' :
-                              'bg-purple-50 text-purple-700 border-purple-100'
-                            }`}>{skill.name}</span>
+                                'bg-purple-50 text-purple-700 border-purple-100'
+                              }`}>{skill.name}</span>
                           ))}
                           {allSkills.length === 0 && (
                             <span className="text-gray-400 italic text-xs">No skills analyzed</span>
@@ -190,13 +262,13 @@ export default function Home() {
                         </select>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                        <a 
-                          href={url} 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
+                        <a
+                          href={url}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="text-blue-600 hover:text-blue-900 font-semibold"
                           onClick={() => {
-                            if(status === "new"){
+                            if (status === "new") {
                               updateStatus(id, "viewed");
                             }
                           }}

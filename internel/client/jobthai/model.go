@@ -52,14 +52,13 @@ type JobDetailResponse struct {
 				ID      int    `json:"_id"`
 				Title   string `json:"title"`
 				Company struct {
-					ID             int      `json:"_id"`
-					Name           string   `json:"name"`
-					Logo           string   `json:"logo"`
-					Website        string   `json:"website"`
-					Pictures       []string `json:"pictures"`
-					Detail         string   `json:"detail"`
-					Benefit        string   `json:"benefit"`
-					SpecialContent string   `json:"specialContent"`
+					ID       int      `json:"_id"`
+					Name     string   `json:"name"`
+					Logo     string   `json:"logo"`
+					Website  string   `json:"website"`
+					Pictures []string `json:"pictures"`
+					Detail   string   `json:"detail"`
+					Benefit  string   `json:"benefit"`
 				} `json:"company"`
 				Properties   []string `json:"properties"`
 				Benefit      string   `json:"benefit"`

@@ -19,10 +19,10 @@ import (
 
 func initializeServer(db *mongo.Database) *App {
 	jobRepository := repository.NewJobRepository(db)
-	jobHandler := handler.NewJobHandler(jobRepository)
-	engine := NewRouter(jobHandler)
 	slogLogger := logger.NewLogger()
 	scraperUsecase := usecase.NewScraperUsecase(jobRepository, slogLogger)
+	jobHandler := handler.NewJobHandler(jobRepository, scraperUsecase)
+	engine := NewRouter(jobHandler)
 	app := &App{
 		Router:  engine,
 		Scraper: scraperUsecase,

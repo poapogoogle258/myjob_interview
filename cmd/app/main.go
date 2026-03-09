@@ -16,8 +16,12 @@ func NewRouter(h *handler.JobHandler) *gin.Engine {
 	r.Use(CORSMiddleware())
 	v1 := r.Group("/api/v1")
 	{
+
 		v1.GET("/job", h.GetAllJobs)
 		v1.PUT("/job/:id/status", h.UpdateJobStatus)
+
+		v1.GET("/cron/scraping/active", h.ActiveScrapingManual)
+		v1.GET("/cron/scraping/status", h.GetScrapingJobStatus)
 	}
 	return r
 }
@@ -35,7 +39,7 @@ func main() {
 	app := initializeServer(db)
 
 	c := cron.New()
-	c.AddFunc("@every 30m", app.Scraper.ScrapingJob)
+	// c.AddFunc("@every 30m", app.Scraper.ScrapingJob)
 	c.Start()
 	defer c.Stop()
 

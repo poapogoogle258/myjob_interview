@@ -51,6 +51,7 @@ func (r *jobRepository) UpsertByExternalID(ctx context.Context, job *model.JobMo
 
 	filter := bson.M{
 		"external_id": job.ExternalID,
+		"hash_id":     job.HashId,
 		"source":      job.Source,
 	}
 
@@ -140,7 +141,7 @@ func (r *jobRepository) GetPaginated(ctx context.Context, orderby string, page, 
 
 // GetAll retrieves all jobs from the collection.
 func (r *jobRepository) GetAll(ctx context.Context) ([]*model.JobModel, error) {
-	cursor, err := r.collection.Find(ctx, bson.M{})
+	cursor, err := r.collection.Find(ctx, bson.M{"skills.languages": bson.M{"$in": []string{"golang", "go"}}})
 	if err != nil {
 		return nil, err
 	}

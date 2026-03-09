@@ -18,18 +18,40 @@ import (
 )
 
 type ScraperUsecase struct {
-	logger *slog.Logger
-	repo   repository.JobRepository
+	processing bool
+	lastTime   *time.Time
+	logger     *slog.Logger
+	repo       repository.JobRepository
 }
 
 func NewScraperUsecase(repo repository.JobRepository, logger *slog.Logger) *ScraperUsecase {
+	now := time.Now()
 	return &ScraperUsecase{
-		repo:   repo,
-		logger: logger,
+		processing: false,
+		lastTime:   &now,
+		repo:       repo,
+		logger:     logger,
 	}
 }
 
+func (u *ScraperUsecase) IsProcessing() bool {
+	return u.processing
+}
+
+func (u *ScraperUsecase) GetScrapingJobLastTime() *time.Time {
+	return u.lastTime
+}
+
 func (u *ScraperUsecase) ScrapingJob() {
+	if u.processing {
+		return
+	}
+
+	u.processing = true
+	defer func() {
+		u.processing = false
+	}()
+
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 	u.logger.InfoContext(ctx, "start scraping schedule job")
@@ -75,6 +97,8 @@ func (u *ScraperUsecase) ScrapingJob() {
 		}
 
 		u.logger.InfoContext(ctx, fmt.Sprintf("website %s found %d jobs have golang in attribute and updated", provider.GetName(), length_job))
+		now := time.Now()
+		u.lastTime = &now
 	}
 }
 
