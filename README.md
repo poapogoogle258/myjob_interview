@@ -18,7 +18,6 @@
 - **Library:** [React](https://reactjs.org/) (Client Components)
 - **Language:** [TypeScript](https://www.typescriptlang.org/)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-- **Icons:** SVG Icons & Lucide-style animations
 
 ### Backend
 - **Language:** [Go (Golang)](https://go.dev/)
