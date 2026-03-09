@@ -3,7 +3,7 @@
 
 โปรเจกต์นี้เป็นระบบ Dashboard สำหรับจัดการและติดตามสถานะการสมัครงาน (Job Application Tracking) ที่ช่วยให้ผู้ใช้งานสามารถบริหารจัดการรายการงานที่สนใจหรือสมัครไปแล้วได้อย่างมีประสิทธิภาพ
 
-![Dashboard Example](example/dashboard.png)
+![Dashboard Example](./example/dashboard.png)
 
 ## 🎯 จุดประสงค์ของโปรเจกต์
 1. เพื่อรวบรวมข้อมูลงานจากแหล่งต่างๆ (เช่น JobsDB) มาไว้ในที่เดียว
@@ -20,7 +20,15 @@
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 - **Icons:** SVG Icons & Lucide-style animations
 
-### Backend (API Connection)
+### Backend
+- **Language:** [Go (Golang)](https://go.dev/)
+- **Framework:** [Gin Gonic](https://gin-gonic.com/)
+- **Dependency Injection:** [Google Wire](https://github.com/google/wire)
+- **Database:** [MongoDB](https://www.mongodb.com/)
+- **AI Analysis:** [Ollama](https://ollama.com/) (Model: `typhoon2.5-qwen3-4b`) สำหรับวิเคราะห์ทักษะจากรายละเอียดงาน
+- **Containerization:** Docker & Docker Compose
+
+### API Connection (Frontend)
 - เชื่อมต่อกับ REST API ที่ `http://localhost:8077/api/v1`
 - รองรับการทำงานร่วมกับระบบ Cron Job สำหรับการทำ Web Scraping
 
