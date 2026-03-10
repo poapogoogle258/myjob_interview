@@ -3,7 +3,6 @@ package handler
 import (
 	"net/http"
 	"time"
-
 	"github.com/gin-gonic/gin"
 	"github.com/poapogoogle258/myjob_interview/internel/repository"
 	"github.com/poapogoogle258/myjob_interview/internel/usecase"
