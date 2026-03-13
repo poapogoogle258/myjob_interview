@@ -21,12 +21,18 @@ type JobModel struct {
 	Salary      string             `bson:"salary"`
 	Description string             `bson:"description"`
 	Status      string             `bson:"status"`
+	StatusLOG   []StatusLog        `bson:"status_log"`
 	Skills      *SkillsModel       `bson:"skills"`
 	URL         string             `bson:"url"`
 	HashId      string             `bson:"hash_id"`
 	PostedAt    time.Time          `bson:"posted_at"`
 	CreatedAt   time.Time          `bson:"created_at,omitempty"`
 	UpdatedAt   time.Time          `bson:"updated_at"`
+}
+
+type StatusLog struct {
+	Status  string    `bson:"status"`
+	Changed time.Time `bson:"changed_at"`
 }
 
 type SkillsModel struct {
@@ -42,7 +48,6 @@ func GetHashJobId(data *JobModel) string {
 	title := strings.ToLower(strings.ReplaceAll(data.Title, " ", ""))
 	company := strings.ToLower(strings.ReplaceAll(data.CompanyName, " ", ""))
 	key := fmt.Sprintf("%s;%s;%s", strings.ToLower(data.Source), title, company)
-
 	hashBytes := sha256.Sum256([]byte(key))
 
 	return hex.EncodeToString(hashBytes[:])

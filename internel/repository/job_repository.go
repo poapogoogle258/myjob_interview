@@ -5,6 +5,7 @@ import (
 	"time"
 
 	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 
@@ -19,6 +20,7 @@ type JobRepository interface {
 	GetAll(ctx context.Context) ([]*model.JobModel, error)
 	GetByHashId(ctx context.Context, hashId string) (*model.JobModel, error)
 	UpdateStatus(ctx context.Context, jobID string, status string) error
+	IsExist(ctx context.Context, jobID string) bool
 }
 
 type jobRepository struct {
@@ -155,14 +157,31 @@ func (r *jobRepository) GetAll(ctx context.Context) ([]*model.JobModel, error) {
 }
 
 func (r *jobRepository) UpdateStatus(ctx context.Context, jobID string, status string) error {
-	filter := bson.M{"hash_id": jobID}
+	objID, _ := primitive.ObjectIDFromHex(jobID)
+	filter := bson.M{"_id": objID}
+	statusLog := bson.M{
+		"status":     status,
+		"updated_at": time.Now(),
+	}
 	update := bson.M{
 		"$set": bson.M{
 			"status":     status,
 			"updated_at": time.Now(),
 		},
+		"$push": bson.M{
+			"status_log": statusLog,
+		},
 	}
 
 	_, err := r.collection.UpdateOne(ctx, filter, update)
+
 	return err
+}
+
+func (r *jobRepository) IsExist(ctx context.Context, jobID string) bool {
+	objID, _ := primitive.ObjectIDFromHex(jobID)
+	filter := bson.M{"_id": objID}
+	result := model.JobModel{}
+	err := r.collection.FindOne(ctx, filter).Decode(&result)
+	return err != mongo.ErrNoDocuments
 }
