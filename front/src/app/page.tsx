@@ -167,12 +167,6 @@ export default function Home() {
                 `ดึงข้อมูลล่าสุด ${cronScrapingJob.time === null ? "N/A" : new Date(cronScrapingJob.time).toLocaleTimeString("th-TH", { hour: 'numeric', minute: 'numeric', second: 'numeric' })}`
 							)}
 						</button>
-            {/* <button
-              onClick={fetchJobs}
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors shadow-sm"
-            >
-              Refresh Data
-            </button> */}
 					</div>
 				</header>
 

@@ -8,8 +8,8 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/poapogoogle258/myjob_interview/internel/model"
-	provider "github.com/poapogoogle258/myjob_interview/internel/provider/clients_provider"
+	"github.com/poapogoogle258/myjob_interview/internel/client/provider"
+	"github.com/poapogoogle258/myjob_interview/internel/model/dao"
 )
 
 type Client struct{}
@@ -18,13 +18,13 @@ func (c *Client) GetName() string {
 	return "jobthai"
 }
 
-func (c *Client) FetchJobs() ([]*model.JobModel, error) {
-	results_nums := make([]*model.JobModel, 0)
+func (c *Client) FetchJobs() ([]*dao.JobModel, error) {
+	results_nums := make([]*dao.JobModel, 0)
 	map_results := make(map[string]struct{})
 	keywords := []string{"go", "golang"}
 
 	for _, keyword := range keywords {
-		results := make([]*model.JobModel, 0, 100)
+		results := make([]*dao.JobModel, 0, 100)
 		page := 1
 		for {
 			jobs, err := FetchJobs(keyword, page)
@@ -47,7 +47,7 @@ func (c *Client) FetchJobs() ([]*model.JobModel, error) {
 					continue
 				}
 
-				results = append(results, &model.JobModel{
+				results = append(results, &dao.JobModel{
 					Source:      c.GetName(),
 					ExternalID:  fmt.Sprintf("%d", job.ID),
 					Title:       detail.Title,

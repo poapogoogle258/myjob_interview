@@ -1,21 +1,23 @@
 package handler
 
 import (
+	"log/slog"
 	"net/http"
 	"time"
 
 	"github.com/gin-gonic/gin"
 	"github.com/poapogoogle258/myjob_interview/internel/repository"
-	"github.com/poapogoogle258/myjob_interview/internel/usecase"
+	"github.com/poapogoogle258/myjob_interview/internel/service"
 )
 
 type JobHandler struct {
-	usecase *usecase.ScraperUsecase
+	service *service.ScraperService
 	repo    repository.JobRepository
+	logger  *slog.Logger
 }
 
-func NewJobHandler(repo repository.JobRepository, usecase *usecase.ScraperUsecase) *JobHandler {
-	return &JobHandler{repo: repo, usecase: usecase}
+func NewJobHandler(repo repository.JobRepository, service *service.ScraperService) *JobHandler {
+	return &JobHandler{repo: repo, service: service}
 }
 
 func (h *JobHandler) GetAllJobs(c *gin.Context) {
@@ -61,19 +63,18 @@ func (h *JobHandler) GetScrapingJobStatus(c *gin.Context) {
 		Time         *time.Time `json:"time"`
 	}{
 		Message:      "success",
-		IsProcessing: h.usecase.IsProcessing(),
-		Time:         h.usecase.GetScrapingJobLastTime(),
+		IsProcessing: h.service.IsProcessing(),
+		Time:         h.service.GetScrapingJobLastTime(),
 	})
 }
 
 func (h *JobHandler) ActiveScrapingManual(c *gin.Context) {
-
-	if h.usecase.IsProcessing() {
+	if h.service.IsProcessing() {
 		c.JSON(http.StatusOK, gin.H{"message": "scraping is already in progress"})
 		return
 	}
 
-	go h.usecase.ScrapingJob()
+	go h.service.ScrapingJob()
 
 	c.JSON(http.StatusOK, gin.H{"message": "scraping is processing"})
 }

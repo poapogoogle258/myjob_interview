@@ -10,8 +10,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/poapogoogle258/myjob_interview/internel/handler"
 	"github.com/poapogoogle258/myjob_interview/internel/repository"
-	"github.com/poapogoogle258/myjob_interview/internel/usecase"
-	"github.com/poapogoogle258/myjob_interview/internel/utils/logger"
+	"github.com/poapogoogle258/myjob_interview/internel/service"
+	"github.com/poapogoogle258/myjob_interview/utils/logger"
 	"go.mongodb.org/mongo-driver/mongo"
 )
 
@@ -20,12 +20,12 @@ import (
 func initializeServer(db *mongo.Database) *App {
 	jobRepository := repository.NewJobRepository(db)
 	slogLogger := logger.NewLogger()
-	scraperUsecase := usecase.NewScraperUsecase(jobRepository, slogLogger)
-	jobHandler := handler.NewJobHandler(jobRepository, scraperUsecase)
+	scraperService := service.NewScraperUsecase(jobRepository, slogLogger)
+	jobHandler := handler.NewJobHandler(jobRepository, scraperService)
 	engine := NewRouter(jobHandler)
 	app := &App{
 		Router:  engine,
-		Scraper: scraperUsecase,
+		Scraper: scraperService,
 	}
 	return app
 }
@@ -34,5 +34,5 @@ func initializeServer(db *mongo.Database) *App {
 
 type App struct {
 	Router  *gin.Engine
-	Scraper *usecase.ScraperUsecase
+	Scraper *service.ScraperService
 }

@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/poapogoogle258/myjob_interview/internel/model"
-	provider "github.com/poapogoogle258/myjob_interview/internel/provider/clients_provider"
+	"github.com/poapogoogle258/myjob_interview/internel/client/provider"
+	model "github.com/poapogoogle258/myjob_interview/internel/model/dao"
 )
 
 type Client struct{}

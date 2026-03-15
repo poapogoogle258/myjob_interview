@@ -1,32 +1,33 @@
-package usecase
+package service
 
 import (
 	"context"
 	"encoding/json"
 	"fmt"
 	"log/slog"
+	"os"
 	"slices"
 	"strings"
 	"time"
 
-	"github.com/ollama/ollama/api"
+	ollama "github.com/ollama/ollama/api"
 	_ "github.com/poapogoogle258/myjob_interview/internel/client/jobsdb"
 	_ "github.com/poapogoogle258/myjob_interview/internel/client/jobthai"
-	"github.com/poapogoogle258/myjob_interview/internel/model"
-	"github.com/poapogoogle258/myjob_interview/internel/provider/clients_provider"
+	"github.com/poapogoogle258/myjob_interview/internel/client/provider"
+	"github.com/poapogoogle258/myjob_interview/internel/model/dao"
 	"github.com/poapogoogle258/myjob_interview/internel/repository"
 )
 
-type ScraperUsecase struct {
+type ScraperService struct {
 	processing bool
 	lastTime   *time.Time
 	logger     *slog.Logger
 	repo       repository.JobRepository
 }
 
-func NewScraperUsecase(repo repository.JobRepository, logger *slog.Logger) *ScraperUsecase {
+func NewScraperUsecase(repo repository.JobRepository, logger *slog.Logger) *ScraperService {
 	now := time.Now()
-	return &ScraperUsecase{
+	return &ScraperService{
 		processing: false,
 		lastTime:   &now,
 		repo:       repo,
@@ -34,15 +35,15 @@ func NewScraperUsecase(repo repository.JobRepository, logger *slog.Logger) *Scra
 	}
 }
 
-func (u *ScraperUsecase) IsProcessing() bool {
+func (u *ScraperService) IsProcessing() bool {
 	return u.processing
 }
 
-func (u *ScraperUsecase) GetScrapingJobLastTime() *time.Time {
+func (u *ScraperService) GetScrapingJobLastTime() *time.Time {
 	return u.lastTime
 }
 
-func (u *ScraperUsecase) ScrapingJob() {
+func (u *ScraperService) ScrapingJob() {
 	if u.processing {
 		return
 	}
@@ -55,8 +56,8 @@ func (u *ScraperUsecase) ScrapingJob() {
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 	u.logger.InfoContext(ctx, "start scraping schedule job")
-	for _, client := range clients_provider.GetListProvider() {
-		provider, ok := clients_provider.GetProvider(client)
+	for _, client := range provider.GetListProvider() {
+		provider, ok := provider.GetProvider(client)
 		if !ok {
 			continue
 		}
@@ -71,7 +72,7 @@ func (u *ScraperUsecase) ScrapingJob() {
 		length_job := len(jobs)
 
 		for i, job := range jobs {
-			jobId := model.GetHashJobId(job)
+			jobId := dao.GetHashJobId(job)
 			job.HashId = jobId
 			result, _ := u.repo.GetByHashId(ctx, jobId)
 			if result == nil {
@@ -102,7 +103,7 @@ func (u *ScraperUsecase) ScrapingJob() {
 	}
 }
 
-func AnalysisSkill(jobDescription string) (*model.SkillsModel, error) {
+func AnalysisSkill(jobDescription string) (*dao.SkillsModel, error) {
 	prompt := fmt.Sprintf(`
 	Summarize the required skills from this job description, listing them item by item order by priority using the json format (ToLower)
 	{ 
@@ -120,21 +121,21 @@ func AnalysisSkill(jobDescription string) (*model.SkillsModel, error) {
 	%s
 	`, jobDescription)
 
-	client, err := api.ClientFromEnvironment()
+	client, err := ollama.ClientFromEnvironment()
 	if err != nil {
 		return nil, err
 	}
 
 	steam := false
-	req := &api.GenerateRequest{
-		Model:  "scb10x/typhoon2.5-qwen3-4b:latest", // Specify the model to use
+	req := &ollama.GenerateRequest{
+		Model:  os.Getenv("OLLAMA_LLM_MODEL"), // Specify the model to use
 		Stream: &steam,
 		Format: json.RawMessage(`"json"`),
 		Prompt: prompt,
 	}
 
 	var responseBuilder strings.Builder
-	respFunc := func(resp api.GenerateResponse) error {
+	respFunc := func(resp ollama.GenerateResponse) error {
 		responseBuilder.WriteString(resp.Response)
 		return nil
 	}
@@ -146,7 +147,7 @@ func AnalysisSkill(jobDescription string) (*model.SkillsModel, error) {
 		return nil, err
 	}
 
-	skills := &model.SkillsModel{}
+	skills := &dao.SkillsModel{}
 	if err = json.Unmarshal([]byte(responseBuilder.String()), skills); err != nil {
 		return nil, err
 	}

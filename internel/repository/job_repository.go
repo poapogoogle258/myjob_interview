@@ -2,6 +2,7 @@ package repository
 
 import (
 	"context"
+	"log/slog"
 	"time"
 
 	"go.mongodb.org/mongo-driver/bson"
@@ -9,22 +10,20 @@ import (
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 
-	"github.com/poapogoogle258/myjob_interview/internel/model"
+	model "github.com/poapogoogle258/myjob_interview/internel/model/dao"
 )
 
 type JobRepository interface {
-	CreateIndexes(ctx context.Context) error
-	UpsertByExternalID(ctx context.Context, job *model.JobModel) error
-	GetByExternalID(ctx context.Context, source, externalID string) (*model.JobModel, error)
-	GetPaginated(ctx context.Context, orderby string, page, limit int64) ([]*model.JobModel, error)
 	GetAll(ctx context.Context) ([]*model.JobModel, error)
 	GetByHashId(ctx context.Context, hashId string) (*model.JobModel, error)
+	UpsertByExternalID(ctx context.Context, job *model.JobModel) error
 	UpdateStatus(ctx context.Context, jobID string, status string) error
 	IsExist(ctx context.Context, jobID string) bool
 }
 
 type jobRepository struct {
 	collection *mongo.Collection
+	logger     *slog.Logger
 }
 
 func NewJobRepository(db *mongo.Database) JobRepository {
@@ -86,59 +85,6 @@ func (r *jobRepository) GetByHashId(ctx context.Context, hashId string) (*model.
 		return nil, err
 	}
 	return &job, nil
-}
-
-// GetByExternalID retrieves a single job by its source and external ID.
-func (r *jobRepository) GetByExternalID(ctx context.Context, source, externalID string) (*model.JobModel, error) {
-	filter := bson.M{
-		"source":      source,
-		"external_id": externalID,
-	}
-
-	var job model.JobModel
-	err := r.collection.FindOne(ctx, filter).Decode(&job)
-	if err != nil {
-		if err == mongo.ErrNoDocuments {
-			return nil, nil
-		}
-		return nil, err
-	}
-	return &job, nil
-}
-
-// GetPaginated retrieves a list of jobs with pagination and sorting.
-// orderby can be prefixed with '-' for descending order (e.g., "-posted_at").
-func (r *jobRepository) GetPaginated(ctx context.Context, orderby string, page, limit int64) ([]*model.JobModel, error) {
-	findOptions := options.Find()
-
-	if orderby != "" {
-		sortDir := 1
-		sortKey := orderby
-		if orderby[0] == '-' {
-			sortDir = -1
-			sortKey = orderby[1:]
-		}
-		findOptions.SetSort(bson.D{{Key: sortKey, Value: sortDir}})
-	}
-
-	if page < 1 {
-		page = 1
-	}
-	skip := (page - 1) * limit
-	findOptions.SetSkip(skip)
-	findOptions.SetLimit(limit)
-
-	cursor, err := r.collection.Find(ctx, bson.M{}, findOptions)
-	if err != nil {
-		return nil, err
-	}
-	defer cursor.Close(ctx)
-
-	var jobs []*model.JobModel
-	if err := cursor.All(ctx, &jobs); err != nil {
-		return nil, err
-	}
-	return jobs, nil
 }
 
 // GetAll retrieves all jobs from the collection.

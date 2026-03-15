@@ -1,12 +1,12 @@
-package clients_provider
+package provider
 
 import (
-	"github.com/poapogoogle258/myjob_interview/internel/model"
+	"github.com/poapogoogle258/myjob_interview/internel/model/dao"
 )
 
 type JobProvider interface {
 	GetName() string
-	FetchJobs() ([]*model.JobModel, error)
+	FetchJobs() ([]*dao.JobModel, error)
 }
 
 var registry = make(map[string]JobProvider)

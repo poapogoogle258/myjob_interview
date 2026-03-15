@@ -10,13 +10,14 @@ import (
 
 	"github.com/poapogoogle258/myjob_interview/internel/handler"
 	"github.com/poapogoogle258/myjob_interview/internel/repository"
-	"github.com/poapogoogle258/myjob_interview/internel/usecase"
-	"github.com/poapogoogle258/myjob_interview/internel/utils/logger"
+	"github.com/poapogoogle258/myjob_interview/internel/service"
+
+	"github.com/poapogoogle258/myjob_interview/utils/logger"
 )
 
 type App struct {
 	Router  *gin.Engine
-	Scraper *usecase.ScraperUsecase
+	Scraper *service.ScraperService
 }
 
 func initializeServer(db *mongo.Database) *App {
@@ -24,7 +25,7 @@ func initializeServer(db *mongo.Database) *App {
 		logger.NewLogger,
 		repository.NewJobRepository,
 		handler.NewJobHandler,
-		usecase.NewScraperUsecase,
+		service.NewScraperUsecase,
 		NewRouter,
 		wire.Struct(new(App), "*"),
 	)
