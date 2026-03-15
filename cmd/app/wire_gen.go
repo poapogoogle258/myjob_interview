@@ -18,10 +18,10 @@ import (
 // Injectors from wire.go:
 
 func initializeServer(db *mongo.Database) *App {
-	jobRepository := repository.NewJobRepository(db)
 	slogLogger := logger.NewLogger()
+	jobRepository := repository.NewJobRepository(db, slogLogger)
 	scraperService := service.NewScraperUsecase(jobRepository, slogLogger)
-	jobHandler := handler.NewJobHandler(jobRepository, scraperService)
+	jobHandler := handler.NewJobHandler(jobRepository, scraperService, slogLogger)
 	engine := NewRouter(jobHandler)
 	app := &App{
 		Router:  engine,

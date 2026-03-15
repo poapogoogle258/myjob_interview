@@ -6,7 +6,9 @@ import (
 	"io"
 	"net/http"
 	"net/url"
+	"strconv"
 	"strings"
+	"time"
 
 	"github.com/poapogoogle258/myjob_interview/internel/client/provider"
 	"github.com/poapogoogle258/myjob_interview/internel/model/dao"
@@ -69,6 +71,32 @@ func (c *Client) FetchJobs() ([]*dao.JobModel, error) {
 	}
 
 	return results_nums, nil
+}
+
+func (c *Client) SyncJobDetail(job *dao.JobModel) {
+	jobId, _ := strconv.Atoi(job.ExternalID)
+	res, err := FetchJobsDetail(jobId)
+	if err != nil {
+		return
+	}
+
+	if res.Data.GetJobRawData == nil {
+		job.Status = "deleted"
+		job.StatusLOG = append(job.StatusLOG, dao.StatusLog{
+			Status:  "deleted",
+			Changed: time.Now(),
+		})
+	} else {
+		detail := res.Data.GetJobRawData.Data
+
+		job.Title = detail.Title
+		job.CompanyName = detail.Company.Name
+		job.Location = fmt.Sprintf("%s %s %s %s", detail.WorkLocation.Province.Name, detail.WorkLocation.District.Name, detail.WorkLocation.Subdistrict.Name, detail.WorkLocation.Address)
+		job.Salary = detail.Salary
+		job.Description = fmt.Sprintf("properties :\n%s\n description :\n %s", detail.Description, strings.Join(detail.Properties, "\n"))
+		job.PostedAt = detail.UpdatedAt
+	}
+
 }
 
 func init() {

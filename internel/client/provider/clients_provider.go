@@ -7,6 +7,7 @@ import (
 type JobProvider interface {
 	GetName() string
 	FetchJobs() ([]*dao.JobModel, error)
+	SyncJobDetail(job *dao.JobModel)
 }
 
 var registry = make(map[string]JobProvider)

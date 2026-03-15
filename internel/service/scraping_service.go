@@ -2,6 +2,8 @@ package service
 
 import (
 	"context"
+	"crypto/sha256"
+	"encoding/hex"
 	"encoding/json"
 	"fmt"
 	"log/slog"
@@ -55,8 +57,11 @@ func (u *ScraperService) ScrapingJob() {
 
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
+	start_scraping := time.Now()
+	token_scraping_job := generateTimeToken(start_scraping)
 	u.logger.InfoContext(ctx, "start scraping schedule job")
 	for _, client := range provider.GetListProvider() {
+		start_scraping_client := time.Now()
 		provider, ok := provider.GetProvider(client)
 		if !ok {
 			continue
@@ -71,9 +76,11 @@ func (u *ScraperService) ScrapingJob() {
 		u.logger.InfoContext(ctx, fmt.Sprintf("website %s found %d jobs.", provider.GetName(), len(jobs)))
 		length_job := len(jobs)
 
+		// find and update new job
 		for i, job := range jobs {
 			jobId := dao.GetHashJobId(job)
 			job.HashId = jobId
+			job.SyncID = token_scraping_job
 			result, _ := u.repo.GetByHashId(ctx, jobId)
 			if result == nil {
 				u.logger.InfoContext(ctx, fmt.Sprintf("(%d/%d)analysis job-id %s", i+1, len(jobs), jobId), "client", provider.GetName(), "externalID", job.ExternalID, "title", job.Title, "company", job.CompanyName)
@@ -82,11 +89,12 @@ func (u *ScraperService) ScrapingJob() {
 					u.logger.WarnContext(ctx, fmt.Sprintf("(%d/%d)analysis job-id %s failed", i+1, len(jobs), jobId), "error", err, "client", provider.GetName(), "externalID", job.ExternalID, "title", job.Title, "company", job.CompanyName)
 					continue
 				}
-				job.Status = "new"
 				job.Skills = skills
+				job.StatusLOG = []dao.StatusLog{}
 			} else {
 				job.Status = result.Status
 				job.Skills = result.Skills
+				job.StatusLOG = result.StatusLOG
 			}
 
 			if !slices.Contains(job.Skills.Languages, "golang") {
@@ -97,10 +105,23 @@ func (u *ScraperService) ScrapingJob() {
 			u.logger.InfoContext(ctx, fmt.Sprintf("(%d/%d)job-id %s updated", i+1, len(jobs), jobId))
 		}
 
-		u.logger.InfoContext(ctx, fmt.Sprintf("website %s found %d jobs have golang in attribute and updated", provider.GetName(), length_job))
-		now := time.Now()
-		u.lastTime = &now
+		// update job not found in ScrapingJob
+		jobsNotSync, _ := u.repo.GetExceptSyncId(ctx, client, token_scraping_job)
+		u.logger.InfoContext(ctx, fmt.Sprintf("website %s update old job not found in scraping %d jobs.", provider.GetName(), len(jobsNotSync)))
+		for i, job := range jobsNotSync {
+			provider.SyncJobDetail(job)
+			jobId := dao.GetHashJobId(job)
+			job.HashId = jobId
+			job.SyncID = token_scraping_job
+			u.repo.UpsertByExternalID(ctx, job)
+			u.logger.InfoContext(ctx, fmt.Sprintf("(%d/%d)job-id %s updated", i+1, len(jobsNotSync), jobId))
+		}
+
+		time_used := time.Since(start_scraping_client)
+		u.logger.InfoContext(ctx, fmt.Sprintf("website %s found %d jobs have golang in attribute and updated in %f sec.", provider.GetName(), length_job, time_used.Seconds()))
 	}
+	now := time.Now()
+	u.lastTime = &now
 }
 
 func AnalysisSkill(jobDescription string) (*dao.SkillsModel, error) {
@@ -153,4 +174,19 @@ func AnalysisSkill(jobDescription string) (*dao.SkillsModel, error) {
 	}
 
 	return skills, nil
+}
+
+func generateTimeToken(t time.Time) string {
+	nano := t.UnixNano()
+
+	b := make([]byte, 8)
+	for i := range b {
+		b[i] = byte(nano >> (i * 8))
+	}
+
+	hasher := sha256.New()
+	hasher.Write(b)
+	hashBytes := hasher.Sum(nil)
+
+	return hex.EncodeToString(hashBytes)
 }

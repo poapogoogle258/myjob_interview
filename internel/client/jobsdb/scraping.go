@@ -6,8 +6,10 @@ import (
 	"io"
 	"net/http"
 	"strings"
+	"time"
 
 	"github.com/poapogoogle258/myjob_interview/internel/client/provider"
+	"github.com/poapogoogle258/myjob_interview/internel/model/dao"
 	model "github.com/poapogoogle258/myjob_interview/internel/model/dao"
 )
 
@@ -36,6 +38,10 @@ func (c *Client) FetchJobs() ([]*model.JobModel, error) {
 			if detail.Salary != nil && detail.Salary.Label != "" {
 				salary = detail.Salary.Label
 			}
+			status := "new"
+			if detail.IsExpired {
+				status = "deleted"
+			}
 			results = append(results, &model.JobModel{
 				Source:      c.GetName(),
 				ExternalID:  fmt.Sprintf("%s", job.ID),
@@ -44,7 +50,7 @@ func (c *Client) FetchJobs() ([]*model.JobModel, error) {
 				Location:    detail.Location.Label,
 				Salary:      salary,
 				Description: fmt.Sprintf("abstract :\n%s\n description :\n %s", detail.Abstract, detail.Content),
-				Status:      "new",
+				Status:      status,
 				Skills:      nil,
 				URL:         fmt.Sprintf("https://th.jobsdb.com/th/job/%s", job.ID),
 				PostedAt:    detail.ListedAt.DateTimeUtc,
@@ -57,6 +63,36 @@ func (c *Client) FetchJobs() ([]*model.JobModel, error) {
 	}
 
 	return results, nil
+}
+
+func (c *Client) SyncJobDetail(job *dao.JobModel) {
+	jobId := job.ExternalID
+	res, err := FetchJobDetail(jobId)
+	if err != nil {
+		return
+	}
+
+	detail := res.Jobdetails.Result.Job
+	salary := "ไม่ได้ระบุ"
+	if detail.Salary != nil && detail.Salary.Label != "" {
+		salary = detail.Salary.Label
+	}
+	status := job.Status
+	if detail.IsExpired {
+		status = "deleted"
+		job.StatusLOG = append(job.StatusLOG, dao.StatusLog{
+			Status:  "deleted",
+			Changed: time.Now(),
+		})
+	}
+	job.Title = detail.Title
+	job.CompanyName = detail.Advertiser.Name
+	job.Location = detail.Location.Label
+	job.Salary = salary
+	job.Description = fmt.Sprintf("abstract :\n%s\n description :\n %s", detail.Abstract, detail.Content)
+	job.Status = status
+	job.PostedAt = detail.ListedAt.DateTimeUtc
+
 }
 
 func init() {

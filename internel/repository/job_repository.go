@@ -16,6 +16,8 @@ import (
 type JobRepository interface {
 	GetAll(ctx context.Context) ([]*model.JobModel, error)
 	GetByHashId(ctx context.Context, hashId string) (*model.JobModel, error)
+	GetExceptSyncId(ctx context.Context, source string, syncId string) ([]*model.JobModel, error)
+	CreateIndexes(ctx context.Context) error
 	UpsertByExternalID(ctx context.Context, job *model.JobModel) error
 	UpdateStatus(ctx context.Context, jobID string, status string) error
 	IsExist(ctx context.Context, jobID string) bool
@@ -26,9 +28,10 @@ type jobRepository struct {
 	logger     *slog.Logger
 }
 
-func NewJobRepository(db *mongo.Database) JobRepository {
+func NewJobRepository(db *mongo.Database, logger *slog.Logger) JobRepository {
 	return &jobRepository{
 		collection: db.Collection("jobs"),
+		logger:     logger,
 	}
 }
 
@@ -89,7 +92,7 @@ func (r *jobRepository) GetByHashId(ctx context.Context, hashId string) (*model.
 
 // GetAll retrieves all jobs from the collection.
 func (r *jobRepository) GetAll(ctx context.Context) ([]*model.JobModel, error) {
-	cursor, err := r.collection.Find(ctx, bson.M{"skills.languages": bson.M{"$in": []string{"golang", "go"}}})
+	cursor, err := r.collection.Find(ctx, bson.M{"status": bson.M{"$ne": "deleted"}, "skills.languages": bson.M{"$in": []string{"golang", "go"}}})
 	if err != nil {
 		return nil, err
 	}
@@ -103,8 +106,8 @@ func (r *jobRepository) GetAll(ctx context.Context) ([]*model.JobModel, error) {
 }
 
 func (r *jobRepository) UpdateStatus(ctx context.Context, jobID string, status string) error {
+
 	objID, _ := primitive.ObjectIDFromHex(jobID)
-	filter := bson.M{"_id": objID}
 	statusLog := bson.M{
 		"status":     status,
 		"updated_at": time.Now(),
@@ -119,7 +122,8 @@ func (r *jobRepository) UpdateStatus(ctx context.Context, jobID string, status s
 		},
 	}
 
-	_, err := r.collection.UpdateOne(ctx, filter, update)
+	r.collection.UpdateOne(ctx, bson.M{"_id": objID, "status_log": bson.M{"$not": bson.M{"$size": 0}}}, bson.M{"$set": bson.M{"status_log": bson.A{}}})
+	_, err := r.collection.UpdateOne(ctx, bson.M{"_id": objID}, update)
 
 	return err
 }
@@ -130,4 +134,18 @@ func (r *jobRepository) IsExist(ctx context.Context, jobID string) bool {
 	result := model.JobModel{}
 	err := r.collection.FindOne(ctx, filter).Decode(&result)
 	return err != mongo.ErrNoDocuments
+}
+
+func (r *jobRepository) GetExceptSyncId(ctx context.Context, source string, syncId string) ([]*model.JobModel, error) {
+	cursor, err := r.collection.Find(ctx, bson.M{"source": source, "sync_id": bson.M{"$ne": syncId}, "status": bson.M{"$ne": "deleted"}})
+	if err != nil {
+		return nil, err
+	}
+	defer cursor.Close(ctx)
+
+	var jobs []*model.JobModel
+	if err := cursor.All(ctx, &jobs); err != nil {
+		return nil, err
+	}
+	return jobs, nil
 }

@@ -15,6 +15,7 @@ type JobModel struct {
 	ID          primitive.ObjectID `bson:"_id,omitempty"`
 	Source      string             `bson:"source"`      // e.g., "jobsdb", "jobthai"
 	ExternalID  string             `bson:"external_id"` // ID from the original platform
+	SyncID      string             `bson:"sync_id"`
 	Title       string             `bson:"title"`
 	CompanyName string             `bson:"company_name"`
 	Location    string             `bson:"location"`

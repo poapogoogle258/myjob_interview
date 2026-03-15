@@ -67,11 +67,17 @@ func TestFetchJobsDetail(t *testing.T) {
 			want:    nil,
 			wantErr: false,
 		},
+		{
+			name:    "example fetch id 1692628",
+			id:      1692628,
+			want:    nil,
+			wantErr: false,
+		},
 	}
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			_, gotErr := jobthai.FetchJobsDetail(tt.id)
+			result, gotErr := jobthai.FetchJobsDetail(tt.id)
 			if gotErr != nil {
 				if !tt.wantErr {
 					t.Errorf("FetchJobsDetail() failed: %v", gotErr)
@@ -79,10 +85,9 @@ func TestFetchJobsDetail(t *testing.T) {
 				return
 			}
 
+			println(result.Data.GetJobRawData == nil)
+
 			// fmt.Println(detail.Data.GetJobRawData.Data.Description)
-			// for _, propertie := range detail.Data.GetJobRawData.Data.Properties {
-			// 	fmt.Printf(propertie)
-			// }
 
 		})
 	}

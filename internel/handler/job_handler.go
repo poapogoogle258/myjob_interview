@@ -3,6 +3,7 @@ package handler
 import (
 	"log/slog"
 	"net/http"
+	"slices"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -16,8 +17,8 @@ type JobHandler struct {
 	logger  *slog.Logger
 }
 
-func NewJobHandler(repo repository.JobRepository, service *service.ScraperService) *JobHandler {
-	return &JobHandler{repo: repo, service: service}
+func NewJobHandler(repo repository.JobRepository, service *service.ScraperService, logger *slog.Logger) *JobHandler {
+	return &JobHandler{repo: repo, service: service, logger: logger}
 }
 
 func (h *JobHandler) GetAllJobs(c *gin.Context) {
@@ -31,14 +32,24 @@ func (h *JobHandler) GetAllJobs(c *gin.Context) {
 }
 
 func (h *JobHandler) UpdateJobStatus(c *gin.Context) {
+	h.logger.Info("API UpdateJobStatus Route")
+
 	jobID := c.Param("id")
 
 	var body struct {
 		Status string `json:"status" binding:"required"`
 	}
 
+	h.logger.Info("API UpdateJobStatus Body", "body", body)
+
 	if err := c.ShouldBindJSON(&body); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+
+	status_list := []string{"new", "viewed", "favorite", "registered", "interview", "rejected", "offered", "optional"}
+	if !slices.Contains(status_list, body.Status) {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "invalid status"})
 		return
 	}
 
@@ -49,6 +60,7 @@ func (h *JobHandler) UpdateJobStatus(c *gin.Context) {
 
 	err := h.repo.UpdateStatus(c.Request.Context(), jobID, body.Status)
 	if err != nil {
+		h.logger.Info("API UpdateJobStatus Error", "error", err)
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}

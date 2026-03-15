@@ -24,7 +24,7 @@ FetchData:
 }
 
 func TestFetchJobDetail(t *testing.T) {
-	data, err := jobsdb.FetchJobDetail("90623433")
+	data, err := jobsdb.FetchJobDetail("90944662")
 	if err != nil {
 		t.Errorf("FetchJobDetail() failed: %v", err)
 		return
