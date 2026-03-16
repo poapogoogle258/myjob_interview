@@ -137,7 +137,13 @@ func (r *jobRepository) IsExist(ctx context.Context, jobID string) bool {
 }
 
 func (r *jobRepository) GetExceptSyncId(ctx context.Context, source string, syncId string) ([]*model.JobModel, error) {
-	cursor, err := r.collection.Find(ctx, bson.M{"source": source, "sync_id": bson.M{"$ne": syncId}, "status": bson.M{"$ne": "deleted"}})
+	cursor, err := r.collection.Find(ctx, bson.M{"source": source, "sync_id": bson.M{"$ne": syncId}, "status": bson.M{"$in": []string{
+		"new",
+		"favorite",
+		"viewed",
+		"registered",
+		"optional",
+	}}})
 	if err != nil {
 		return nil, err
 	}
